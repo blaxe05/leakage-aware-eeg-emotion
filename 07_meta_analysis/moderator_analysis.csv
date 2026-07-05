@@ -1,0 +1,32 @@
+analysis,level,k,pooled,ci_lo,ci_hi,I2
+SEED-3 by adaptation setting,few-shot,7,88.67,84.39,92.95,97
+SEED-3 by adaptation setting,inductive,26,85.96,83.33,88.6,96
+SEED-3 by adaptation setting,transductive,56,89.07,87.85,90.29,91
+SEED-3 by adaptation setting,unclear,0,,,,
+SEED-3 by method family,contrastive/SSL,2,88.1,85.3,90.9,52
+SEED-3 by method family,domain-adversarial/DA,41,87.52,85.83,89.2,93
+SEED-3 by method family,graph/GNN,36,89,87.25,90.74,94
+SEED-3 by method family,other/DL,5,91.79,87.22,96.36,93
+SEED-3 by method family,traditional ML,3,79.28,71.65,86.91,81
+SEED-3 by method family,transformer/attn,2,87.12,85.03,89.21,
+SEED-3 by leakage risk,low/low-some,5,83.83,75.74,91.91,97
+SEED-3 by leakage risk,some-concerns,83,88.32,87.19,89.46,94
+SEED-3 by leakage risk,high/unclear,1,,,,
+SEED-3 by reproducibility,code,7,89.72,86.79,92.65,83
+SEED-3 by reproducibility,no-code,82,87.99,86.78,89.19,95
+SEED-IV by adaptation setting,few-shot,5,70.61,60.85,80.37,93
+SEED-IV by adaptation setting,inductive,12,75.13,71.98,78.28,93
+SEED-IV by adaptation setting,transductive,39,75.38,72.99,77.77,94
+SEED-IV by adaptation setting,unclear,0,,,,
+SEED-IV by method family,domain-adversarial/DA,27,74.16,71.04,77.29,94
+SEED-IV by method family,graph/GNN,22,75.4,72.53,78.27,95
+SEED-IV by method family,other/DL,5,77.97,74.11,81.83,56
+SEED-IV by method family,transformer/attn,2,74.1,70.81,77.39,44
+SEED-IV by leakage risk,low/low-some,2,74.96,67.86,82.06,54
+SEED-IV by leakage risk,some-concerns,54,74.91,72.97,76.86,94
+DEAP by adaptation setting,few-shot,1,,,,
+DEAP by adaptation setting,inductive,5,69.22,64.89,73.56,93
+DEAP by adaptation setting,transductive,15,67.44,65.73,69.15,9
+DEAP by adaptation setting,unclear,0,,,,
+meta-reg,SEED-3 all acc~year,89,0.896,0.361,slope_pts_per_year,
+meta-reg,SEED-3 transductive acc~year,56,1.067,0.409,slope_pts_per_year,

@@ -1,0 +1,5 @@
+dataset,stratum,k,pooled_mean,mean_se,egger_intercept,egger_intercept_se,egger_t,egger_df,egger_p,interpretation
+SEED,inductive/no-target,20,85.96,2.88,-6.407,2.531,-2.532,18,0.0209,exploratory asymmetry diagnostic; not publication-bias proof
+SEED,transductive-UDA,42,89.07,1.683,-4.354,1.527,-2.851,40,0.0069,exploratory asymmetry diagnostic; not publication-bias proof
+SEED-IV,inductive/no-target,8,75.13,4.275,,,,,,exploratory asymmetry diagnostic; not publication-bias proof
+SEED-IV,transductive-UDA,31,75.38,2.173,-1.107,2.329,-0.475,29,0.6381,exploratory asymmetry diagnostic; not publication-bias proof

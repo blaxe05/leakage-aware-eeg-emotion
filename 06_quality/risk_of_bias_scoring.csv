@@ -1,0 +1,406 @@
+paper_id,dataset_clarity,protocol_clarity,subject_independent_validity,train_val_test_separation,preproc_inside_cv,hyperparam_selection_clarity,target_data_usage_disclosure,statistical_reporting,baseline_strength,reproducibility_code,leakage_risk_item,affective_theory_relevance,total_score,max_score,percent,quality_band,fatal_flag,fatal_reason,notes
+EEG-0001,2,2,2,1,1,1,2,2,1,1,1,2,18,24,75.0,Moderate,no,,full text; inductive LOSO; feature-selection vs CV boundary unclear (items 5/11); only feature-selection-variant baselines (no strong DL)
+EEG-0002,2,2,2,1,1,1,2,2,2,2,1,2,20,24,83.3,High,no,,"full text; LOSO + NodeDAT (transductive, disclosed - not leakage); code on GitHub; strong baselines"
+EEG-0003,2,2,2,1,1,1,2,2,1,1,1,2,18,24,75.0,Moderate,no,,UPGRADED to full text (IJCAI 388.pdf root-folder PDF): Table 1 TPT 76.31/15.89 (best of 5); generic 56.73; explicit transductive LOSO; mean+SD+ANOVA+per-subject reported; weak (classical) baselines; no code
+EEG-0004,2,2,2,1,1,1,2,2,2,1,1,2,19,24,79.2,Moderate,no,,UPGRADED to full text (AAAI-21 PDF): Table 2 PPDA(Few) 86.7/7.1; strong DA/DG baselines (DANN/DAN/WGANDA/DResNet/DICA); few unlabeled-target calibration disclosed; no public code; just below High (code item)
+EEG-0005,1,2,2,1,1,1,2,2,1,1,1,2,17,24,70.8,Moderate,no,,value verified from RGNN full-text reproduction (common protocol); DGCNN primary IEEE TAFFC 11(3):532-541 2018 uses SEED+DREAMER so SEED-IV is RGNN repro; DGCNN own internals unread (items 5/6/10)
+EEG-0006,2,2,2,1,1,1,2,2,2,2,1,2,20,24,83.3,High,no,,full text; multisource transductive DA (disclosed); code on GitHub; strong baselines
+EEG-0007,1,2,2,1,1,1,2,2,1,1,1,2,17,24,70.8,Moderate,no,,value verified from RGNN full-text reproduction; BENCHMARK-AMBIGUITY case (subj-dep BiDANN ~92-97 vs subj-indep BiDANN-S 84.14); BiDANN own internals unread
+EEG-0008,2,2,2,1,1,1,2,2,2,1,1,2,19,24,79.2,Moderate,no,,UPGRADED to full text (arXiv 1906.01704); self-reported 85.40/7.53 & 69.03/8.66 match RGNN Table II; venue confirmed IEEE TCDS vol13 2021; domain discriminator (transductive)
+EEG-0014,2,2,2,0,1,0,1,2,2,1,1,2,16,24,66.7,Moderate,no,,full text; INDUCTIVE but model/epoch selection appears to use the held-out (TEST) subject as validation -> model-selection leakage (items 4/6/11); verify exact protocol at full text
+EEG-0015,2,2,2,1,1,1,2,1,2,1,1,2,18,24,75.0,Moderate,no,,full text; PREPRINT (peer-review reconfirm); SEED LOSO + FACED leave-n-subject-out (n=12); per-cell SD not captured; FACED subject/class counts to verify
+EEG-0016,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,UPGRADED to full text (IEEE TNSRE vol29 PDF). NO-FABRICATION CATCH: prior 72.81 is NOT in the paper; real DEAP subj-indep unsupervised LOSO acc V 56.44/A 58.55/D 61.71/Liking 65.89; tables give point values only (no SD -> stat_reporting=1); unsupervised inductive; within-paradigm baselines
+EEG-0017,2,2,2,1,1,1,2,2,2,1,1,2,19,24,79.2,Moderate,no,,UPGRADED to full text (KBS vol276 PDF): Table 4 DREAMER V 80.43/8.01 A 83.33/11.24; Table 3 DEAP V 71.33/5.24 A 73.28/7.74; subject-independent LOSOCV inductive; mean+std+5 metrics+per-subject; strong DL baselines; no public code
+EEG-0024,2,2,2,1,1,1,2,2,2,2,1,2,20,24,83.3,High,no,,full text via ar5iv; SEED 91.35/7.03 SEED-IV 65.53/8.31; LOSO transductive + semi-supervised SOURCE labels (disclosed - not hidden leakage); code github.com/KAZABANA/EEGMatch verified; strong DA baselines; mean+SD; leakage_item=1 (transductive + acc averaged over labeled-trial budget N)
+EEG-0042,2,2,2,1,1,1,2,2,2,2,1,2,20,24,83.3,High,no,,"full text via ar5iv; SEED 85.56/4.78 (cross-session) SEED-IV 74.92/7.92; transductive (target pseudo-labels, disclosed); code github.com/KAZABANA/PR-PL verified; mean+SD; leakage_item=1 (transductive + single-session 93.06 vs cross-session 85.56 protocol ambiguity)"
+EEG-0044,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,24,NA,not-scored,no,,"NARRATIVE include (foundation/pretraining, mdJPT); abstract-verified only, no benchmark accuracy -> rubric not applicable yet; rescore after full-text extraction; code ncclab-sustech/mdJPT_nips2025"
+EEG-0045,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,24,NA,not-scored,no,,"NARRATIVE include (cross-corpus EEG-SCMM); abstract-verified only, relative gain +4.26pct, no absolute number -> rubric not applicable yet; rescore after full-text; code Kyler-RL/SCMM"
+EEG-0027,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,24,NA,not-scored,no,,NARRATIVE/methodological include (degradation-causes analysis); no benchmark result -> rubric not applicable; cited in Discussion for leakage/eval-protocol importance
+EEG-0050,2,2,1,0,0,1,1,1,1,1,0,2,12,24,50.0,Low,no,,"VERIFIED leakage exemplar (full text). Stratified normalization per participant+session INCLUDES held-out test subject -> uses target-subject statistics (effectively transductive); 3 zeros on train/test-separation, preproc-in-CV, leakage-item. Ternary 79.6 (stratified) vs 67.1 (batch norm) = +12.5pts inflation, undisclosed. First LOW-band study; include_meta=no. fatal_flag=no (uses UNLABELED target stats only - transductive not label leakage) but presented/compared as if inductive = comparability flaw"
+EEG-0054,2,2,2,2,1,2,2,2,1,1,2,2,21,24,87.5,High,no,,"clean, methodologically careful (root-folder PDF). DEAP-only; subject-level 70:20:10 split; Test Setup II zero-calibration cross-subject val 69.92/aro 68.89; mean+SD across folds; CORRECTION: secondary 98pct was FABRICATED - not in paper; only weakness is no public code (item 10) + modest baselines (item 9)"
+EEG-0053,2,2,2,1,1,1,2,2,2,2,1,2,20,24,83.3,High,no,,PESD pretrained-ViT DA (root-folder PDF). Cross-subject SEED 87.02/4.36; cross-DATASET 93.14/93.53/92.55 are TRANSDUCTIVE + target-supervised (not inductive) -> leakage_inflation_cases Case 3; public code; strong Table-2 baselines; hyperparams transferred from SEED (item 6=1); cross-dataset labeling/relabeling ambiguity (leakage item=1)
+EEG-0057,2,1,0,0,1,1,0,1,1,1,0,2,10,24,41.7,Low,yes,confirmed SUBJECT leakage + trial/stimulus leakage: paper states 'same subject and same stimuli could be both in the training set and testing set' while claiming user-independent,"FIRST FATAL FLAG in corpus (full text PMC7727848). Near-ceiling DEAP 98.93/99.10 SEED 99.63 from subject+trial leakage; subject_independent_validity=0, train/test-sep=0, target-disclosure=0 (misrepresented), leakage-item=0; include_meta=no; documented leakage_inflation_cases Case 4"
+EEG-0020,2,2,2,1,1,1,2,2,2,1,1,2,19,24,79.2,Moderate,no,,"CLISA full text (IEEE TAC 2022). SEED 3-class LOSO 86.4/6.4; mean+SD+t-tests+Bonferroni; strong baselines (DResNet/PPDA/SeqCLR). TRANSDUCTIVE: prediction uses online adaptive feature normalization with test-subject data (decay 0.99) + stratified norm in training -> train/test-sep=1, preproc-in-cv=1, leakage-item=1; disclosed (not hidden). No verified public code (item 10=1). THU-EP main dataset out-of-scope"
+EEG-0009,2,2,2,1,1,1,2,2,2,1,1,2,19,24,79.2,Moderate,no,,"SDC-Net full text (PREPRINT, arXiv 2507.17524). SEED 91.85/5.98 SEED-IV 74.88/10.47; transductive label-free DA (disclosed); mean+SD+ablations; large same-protocol baseline table (corroborates RGNN/BiHDM/MS-MDA/CLISA). Code 'to be released' github.com/XuanSuTrum/SDC-Net -> item 10=1; authors/venue unverified"
+EEG-0011,2,2,2,2,1,1,2,1,1,1,1,2,18,24,75.0,Moderate,no,,"Source-free UDA (PREPRINT, arXiv 2504.03707). Cross-dataset 2-class DEAP->SEED 65.84 / SEED->DEAP 58.99; clean cross-dataset separation (no source data at adaptation -> train/test-sep=2); SINGLE accuracy, NO SD -> statistical_reporting=1, include_meta=no (narrative); within-paper baselines only; no code; corroborates realistic cross-dataset ~58-67%"
+EEG-0010,2,2,2,1,1,1,2,2,2,1,1,2,19,24,79.2,Moderate,no,,"HEDN full text (PREPRINT, arXiv 2511.06782). SEED 94.00/7.05 SEED-IV 79.36/9.62 DEAP V73.07/A73.20; transductive LOSO (unlabeled target, no target labels - disclosed); strong stat reporting (mean+SD+5-seed stability+best-vs-final); large same-protocol baseline table (reproduces MS-MDA exactly, 3rd corroboration). No public code (item 10=1); authors/venue unverified"
+EEG-0043,2,2,2,1,1,1,2,2,2,2,1,2,20,24,83.3,High,no,,"DAMSDAN full text (PREPRINT, arXiv 2510.17475). SEED 94.86/4.87 SEED-IV 82.48/8.02 FACED-binary 82.88/7.71; transductive LOSO (pseudo-labels - disclosed, NOT leakage); mean+SD+ablations; code VERIFIED github.com/ZJUTofBrainIntelligence/DAMSDAN (item 10=2 -> High). NOTE its Table II reproduces MS-MDA SEED at 81.43/10.17 vs primary 89.63 (reproduction divergence)"
+EEG-0022,2,2,2,2,1,1,2,2,2,2,2,2,22,24,91.7,High,no,,"RSM-CoDG full text (PREPRINT, arXiv 2601.15615). HIGHEST-SCORING in corpus. FIRST inductive DOMAIN-GENERALIZATION (no target data, stratum K): train/test-sep=2, leakage-item=2 (cleanest protocol). SEED 86.35/7.17 SEED-IV 71.59/9.78 SEED-V 62.77/8.86; mean+SD+F1+sens+spec; large baseline set; code VERIFIED github.com/RyanLi-X/RSM-CoDG. Inductive 86.35 matches transductive CLISA/RGNN. min-max norm scope unclear (preproc-in-cv=1)"
+EEG-0035,2,2,2,1,1,1,2,2,2,1,1,2,19,24,79.2,Moderate,no,,"DAGAM full text (PREPRINT, arXiv 2202.12948). SEED 92.59/3.21 SEED-IV 80.74/4.14; transductive LOOCV domain-adversarial-on-graph (disclosed); mean+SD+ablations; Table 1 corroborates DGCNN/BiDANN-S/BiHDM/RGNN. No public code (item 10=1)"
+EEG-0033,2,2,2,2,2,1,2,1,1,2,2,2,21,24,87.5,High,no,,"LGF/MAET full text (PREPRINT, arXiv 2601.08094). INDUCTIVE: subject-wise norm on TRAINING subjects only (preproc-in-cv=2, train/test-sep=2, leakage-item=2 - among cleanest). SEED-VII 7-class 40.1 Acc / 38.7 Macro-F1; NO SD -> statistical_reporting=1, include_meta=no (narrative). Modest baseline set (item 9=1); code VERIFIED github.com/Danielz-z/LGF-EEG-Emotion. New dataset SEED-VII"
+EEG-0021,2,2,2,1,1,1,2,2,2,1,1,2,19,24,79.2,Moderate,no,,"FACE full text (arXiv 2503.18998, under review). FEW-SHOT WITH TARGET LABELS (K-shot calibration) - separate stratum. SEED 5-shot 93.96/2.70 (10-shot 96.72), SEED-IV 89.51/3.13, SEED-V 95.20/1.42; mean+SD+t-tests+multi-shot; large baseline table. Uses target labels by design (train/test-sep=1, leakage-item=1 - disclosed, most permissive). No public code (item 10=1)"
+EEG-0030,2,2,2,2,1,1,2,2,2,1,1,2,20,24,83.3,High,no,,"E2STN full text (PREPRINT, arXiv 2308.05767). Cross-dataset transductive style transfer across SEED/SEED-IV/MPED; uses target STYLE (unlabeled), no target labels. 3-cat e.g. MPED->SEED 73.51/7.23, SEED-IV->SEED 60.51/5.41; mean+SD+S-W+t-test; baselines BiDANN/TANN/GECNN. include_meta=no (cross-dataset singletons). No code. New dataset MPED"
+EEG-0047,2,2,2,2,1,1,2,1,2,1,1,2,19,24,79.2,Moderate,no,,"Cross-dataset UDA full text (PREPRINT, arXiv 2411.12852; extends Imtiaz & Khan). DEAP<->SEED 2-class transductive (unlabeled target + PC-TTA, no target labels); DEAP->SEED 67.44, SEED->DEAP 59.68; NO SD (Table 2 point acc, boxplots only) -> statistical_reporting=1, include_meta=no. CORROBORATES EEG-0011 (~59-67%). No clear code repo"
+EEG-0058,2,2,2,1,1,1,2,1,2,1,2,2,19,24,79.2,Moderate,no,,transductive LOSO (Emo-DD); SEED 85.75/SEED-IV 72.36; SD in table not transcribed; reproduces DGCNN/BiDANN-S baselines
+EEG-0059,2,2,2,1,1,1,2,2,1,1,2,2,19,24,79.2,Moderate,no,,AD-TCN transductive LOSO (CBM 2022 journal); DEAP V64.33/7.06 A63.25/4.62 + per-subject + t-test; DREAMER no SD; realistic
+EEG-0060,2,2,2,1,1,1,2,2,2,2,2,2,21,24,87.5,High,no,,ASJDA TAFFC; transductive LOSO; SEED 93.75/11.39 (all-session 97.78/7.15); SD reported; code public; strong baselines
+EEG-0063,2,2,2,1,1,1,2,2,2,2,2,2,21,24,87.5,High,no,,FDDGNet inductive domain-generalization (no target); AMIGOS 0.7466/0.053 + DREAMER 0.7507/0.041; SD+multi-metric; code public; 2nd AMIGOS source
+EEG-0064,2,1,1,1,0,1,2,1,1,1,1,2,14,24,58.3,Low,no,,FLAG: TAFFC EmoCaps; grouped 10-fold-by-subject; DEAP 'subject-independent' 91-93% implausible vs LOSO ~57-65 -> leakage-suspect (undisclosed norm/segment); no SD
+EEG-0065,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,STSNet inductive LOSOCV; DEAP V69.38/A71.88 DREAMER V78.26/A82.37; no SD; DREAMER recall ~0.92-1.0 imbalance
+EEG-0066,2,2,2,1,1,1,2,2,1,1,2,2,19,24,79.2,Moderate,no,,MF-DFS transductive GFK manifold LOSO; weak non-deep (3-class per dim) DEAP/MAHNOB/SEED ~0.40-0.54; SDs in tables
+EEG-0067,2,2,1,1,1,1,2,1,1,1,1,2,16,24,66.7,Moderate,no,,FLAG: inductive LOSO 2-channel SEED family; SEED-V 5cls 78.12 implausible -> selection/window-leakage suspect; abstract-level
+EEG-0068,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,CMHFE-DAN transductive LOSO (DANN); DEAP SI V78.20/A79.91 DREAMER V64.73/A79.91; no SD on SI; DEAP recall ~92% imbalance-aided
+EEG-0070,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,CA2DANet transductive LOSO (test=target for DA); SEED SI 81.05; SD in figure not transcribed; subject-dependent 96.29 unused
+EEG-0071,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,SSTD inductive LOSOCV (+demographic); DEAP V68.28/A71.48 DREAMER V76.81/A81.64; authors reject random k-fold to avoid leakage; no clear SD
+EEG-0073,2,2,2,1,1,1,2,2,2,1,2,2,20,24,83.3,High,no,,BGAGCN-MT TAFFC; INDUCTIVE LOSO SEED 89.66/4.72 (beats transductive PR-PL/UDDA); SEED-IV 75.78; strong inductive result
+EEG-0074,2,1,1,1,0,1,1,1,1,1,0,2,12,24,50.0,Low,no,,FLAG: TCYB UACL-Net; SEED 94.88/3.86 plausible but DEAP~98/DREAMER~99/FACED~99 near-ceiling + ambiguous 'cross-validation' table -> not credible cross-subject
+EEG-0077,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,Bi-Stream inductive LOSO; DEAP V63.10/A61.89 DREAMER V61.88/A64.25; realistic; no SD
+EEG-0078,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,Bendrich AMIGOS EEG-only LOPO (subject-independent); valence F1 0.741/arousal 0.699; closes AMIGOS gap (1st source); no SD; F1 metric
+EEG-0079,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,Priyasad inductive LOSO; DEAP V69.43/A69.72/D70.72 DREAMER V64.98/A63.71/D61.81; 10CV 88% subject-mixed (disclosed); realistic
+EEG-0081,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,Paredes cross-dataset DREAMER->SEED-VII transductive DA F1 0.619; within-dataset 5-fold 0.945 subject-mixed (excluded); new pair
+EEG-0084,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,"MLT-EDCC; LOSOCV cross-subject ~67-71%; abstract headline 96-98% is 10-fold subject-MIXED eval-inflation (disclosed Table 9, ~27pt) -> leakage_inflation Case 5; no SD on LOSOCV"
+EEG-0086,2,2,2,1,1,1,2,2,1,1,2,2,19,24,79.2,Moderate,no,,curriculum multi-source DA (Neurocomputing 2026; user bonus); transductive LOSO DEAP-V 62.99/5.72 SEED 64.16/8.29; SD reported; conservative numbers
+EEG-0087,2,2,2,1,1,1,2,2,2,1,2,2,20,24,83.3,High,no,,"GA-PDPL inductive LOSO; SEED 69.89/14.39, MPED-7cls 24.87/5.83, GAMEEMO-2 64.34/6.44 (NEW dataset), GAMEEMO-4 49.01/8.46; CI+SEM reported; credible low multi-class numbers"
+EEG-0088,2,1,1,1,1,1,1,1,1,1,0,2,13,24,54.2,Low,no,,"FLAG: CSCL cross-subject; SEED 97.7/CEED 96.15 implausible (leakage-tier) -> suspect, not pooled; documents FACED-9cls 65.98/4.09 and MPED-7cls 51.30/3.3 coverage"
+EEG-0089,2,2,2,1,1,1,2,2,1,1,2,2,19,24,79.2,Moderate,no,,"MSHCL inductive contrastive; SEED 89.3/4.4, MPED-7 38.8/7.1, FACED 77.0/3.6 (broadens MPED/FACED)"
+EEG-0090,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,"FCPL; SEED 89.88, MPED-7 28.81 cross-subject (honest near-chance multi-class)"
+EEG-0091,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,DAPLP transductive; SEED 89.44/SEED-IV 74.57/SEED-V 69.15 (adds SEED-V)
+EEG-0092,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,MMSTG-Net; SEED-VII 63.06 (7cls)/SEED-IV 84.85 (adds SEED-VII)
+EEG-0093,2,1,2,1,1,1,1,1,1,1,1,2,15,24,62.5,Moderate,no,,ST-AlignNet; DEAP 70.86/MAHNOB 70.73 (adds MAHNOB); venue/DOI to confirm
+EEG-0095,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,SS-EMERGE LOSO SEED 92.35/SEED-IV 81.51
+EEG-0097,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,Conditional adversarial DA SEED 93.62/SEED-IV 82.16
+EEG-0099,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,Class-informed adversarial DA SEED 90.21/SEED-IV 77.50
+EEG-0101,2,1,1,1,1,1,2,1,1,1,0,2,14,24,58.3,Low,no,,FLAG suspect: GAMEEMO 99.50/DREAMER 98.79 cross-subject implausible
+EEG-0102,2,1,1,1,1,1,1,1,1,1,0,2,13,24,54.2,Low,no,,FLAG suspect: DREAMER 96/MAHNOB 96.23 near-ceiling; multimodal
+EEG-0105,2,2,2,1,1,1,2,2,1,1,1,2,18,24,75.0,Moderate,no,,"MSDT-GMDA transductive; SEED 94.69/5.16 single-session (META, flagged high)"
+EEG-0106,2,2,2,1,1,1,2,2,1,1,1,2,18,24,75.0,Moderate,no,,"Multisource deep clustering transductive; SEED 90.69/9.28, SEED-IV 74.35/12.06 (META)"
+EEG-0107,2,2,2,1,1,1,2,2,1,1,1,2,18,24,75.0,Moderate,no,,"SCVAE-Net transductive; SEED 95.01/6.67, SEED-IV 74.94/9.88 (META, SEED flagged high)"
+EEG-0108,2,2,2,1,1,1,2,2,1,1,1,2,18,24,75.0,Moderate,no,,"Gated multi-source UDA; SEED 92.54/4.10, DEAP 65.59/5.50 (META); SEED-IV 85.86/2.60 suspect-excluded"
+EEG-0109,2,2,1,1,1,1,2,2,1,1,0,2,16,24,66.7,Moderate,yes,near-ceiling cross-subject (leakage-suspect),"FLAG suspect: PMAN SEED 97.03/1.65, SEED-IV 88.18/4.55 near-ceiling -> excluded from pooling"
+EEG-0110,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,SOGPCN inductive SEED 94.22 (high)
+EEG-0111,2,1,2,1,1,1,2,1,1,1,1,2,16,24,66.7,Moderate,no,,"SECT inductive SEED 85.43, DEAP val 66.83"
+EEG-0112,2,1,1,1,1,1,1,1,1,1,0,2,13,24,54.2,Low,yes,near-ceiling cross-subject (leakage-suspect),FLAG suspect: CLRA DEAP 95+/SEED 95.16 near-ceiling
+EEG-0113,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,Multi-view self-sup few-shot (90 samples) SEED 69.72/SEED-IV 62.87
+EEG-0114,2,1,1,1,1,1,2,1,1,1,0,2,14,24,58.3,Low,no,,"FLAG: Rashomon-GNN DEAP F1 91.96 (metric=F1, not pooled)"
+EEG-0115,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,Pretrained-CNN SEED 78.34/DEAP 72.81/LUMED 81.8
+EEG-0116,2,1,2,1,1,1,1,1,1,1,1,2,15,24,62.5,Moderate,no,,Multi-reservoirs GAN DEAP LOSO 4-class 54.87 (honest low)
+EEG-0117,2,1,1,1,1,1,1,1,1,1,0,2,13,24,54.2,Low,no,,FLAG: PCA-CNN DEAP 81.40 tiny SD (fold-CV not LOSO)
+EEG-0118,2,1,1,1,1,1,1,1,1,1,0,2,13,24,54.2,Low,yes,near-ceiling cross-subject (leakage-suspect),FLAG suspect: MECAM subject-independent >90% most tasks
+EEG-0119,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,MWACN transductive SEED 87.59/SEED-IV 74.38
+EEG-0120,2,2,2,1,1,1,2,1,1,1,1,2,17,24,70.8,Moderate,no,,MS-ADA transductive SEED 86.16/DEAP 65.59/SEED-IV 59.29
+EEG-0121,2,1,2,1,1,1,2,1,1,1,1,2,16,24,66.7,Moderate,no,,HV-flow transductive SEED 84.22
+EEG-0122,2,1,2,1,1,1,1,1,2,0,2,2,16,24,66.7,Moderate,no,,CLAE contrastive; SEED CS 89.61 (no SD); THU-EP 9-class 50.86/6.34; target-use ambiguous
+EEG-0123,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,CPT-LS inductive LOSO; SEED 87.70/6.15 meta; SEED-IV/DEAP narrative
+EEG-0124,2,0,0,0,0,1,1,1,1,0,0,2,8,24,33.3,Low,no,,DBM-BiMamba 'ten-fold subject-independent' DEAP ~95% implausible -> near-ceiling leakage suspect
+EEG-0125,2,1,1,1,1,1,1,2,2,0,1,2,15,24,62.5,Moderate,no,,dual-branch SSL; pretrain+fine-tune; SD over runs; DEAP-V 89.01 suspect
+EEG-0126,2,1,1,1,1,1,1,2,2,0,1,2,15,24,62.5,Moderate,no,,SCTMSA; SEED-IV CS 89.48 unusually high; per-band fusion; verify
+EEG-0127,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"AST-CLNet inductive LOSO; SEED 87.94/6.97, SEED-IV 82.35/6.04 meta; DEAP V/A realistic"
+EEG-0128,2,1,1,1,1,1,2,2,2,0,1,2,16,24,66.7,Moderate,no,,ATLG semi-supervised (target labels used); SEED 83.69/6.83; excluded from meta
+EEG-0129,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Capsule USUR LOSO; honest avg ~51% (best-case 100% per-epoch artifact); cited nums in text
+EEG-0130,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,C2FDA open-set cross-dataset DA; SEED->SEED-IV/V 41.5/42.6/48.9
+EEG-0131,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,CIHL cross-dataset; SEED-VII->SEED-V 36.38
+EEG-0132,2,1,1,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,CRTL DEAP ~90-91% implausible for UDA -> near-ceiling suspect; verify target use
+EEG-0133,2,2,2,1,1,1,2,1,1,0,2,2,17,24,70.8,Moderate,no,,"4-channel CNN; subject-independent LOSO DEAP-V 69.80, SEED 64.92"
+EEG-0134,2,2,1,1,1,1,2,1,2,0,1,2,16,24,66.7,Moderate,no,,"MSRN meta-transfer (target adaptation); SEED 87.05, DEAP-V 71.29, DEAP-A 71.92"
+EEG-0135,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"RGT-GAA transductive; SEED 89.23, DEAP-V 66.4, DEAP-A 68.1"
+EEG-0136,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"multi-source manifold transductive; SEED 86.59, DEAP 64.40"
+EEG-0137,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"SRDANN MMD DA transductive; SEED 84.68, SEED-IV 74.97, MPED 26.56"
+EEG-0138,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,BrainAMDANN transductive; SEED LOSOCV 78.87/8.91 meta
+EEG-0139,2,2,2,1,1,1,1,2,2,0,2,2,18,24,75.0,Moderate,no,,DDMGCN subject-independent SEED 60.79/7.00 (low); subject-dependent PSD ~97.5%
+EEG-0140,2,1,0,0,0,1,1,1,1,0,0,2,9,24,37.5,Low,no,,DIMER DEAP SI 94.82 ~= SD 95.07 -> near-ceiling leakage suspect
+EEG-0141,1,0,0,0,0,1,0,1,1,0,0,2,6,24,25.0,Low,no,,EDS 3D-VAD 12-class 99.82% 'subject-independent' implausible -> leakage suspect
+EEG-0142,2,2,2,1,1,1,2,2,2,0,1,2,18,24,75.0,Moderate,no,,"DANN-MAT transductive; SEED 95.74/3.26, SEED-IV 86.75/5.96 (high, tight SD)"
+EEG-0143,2,0,0,0,0,1,1,1,1,2,0,2,10,24,41.7,Low,no,,MS-TimesNet pools 32 subjects then splits = subject-mixed leakage; code available
+EEG-0144,2,1,1,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,GCN+LSTM DEAP SI 84.81/85.27 high; no SD
+EEG-0145,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,SLT SA-CNN inductive LOSO mean+-SD DEAP & DREAMER (meta)
+EEG-0146,2,1,1,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,DSMT-CapsNet SI SEED 91.12/DEAP 81.70/DREAMER 75.89 (high; SI/SD table discrepancy)
+EEG-0147,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,ML+clustering SD adaptation; research model 79.5% (SEED tentative)
+EEG-0148,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Enhanced cross-dataset UDA; SEED<->DEAP 67.44/59.68
+EEG-0149,2,2,2,1,1,1,1,1,2,0,2,2,17,24,70.8,Moderate,no,,"MSMMTL multi-source manifold; SEED 88.83, DEAP 65.04"
+EEG-0150,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,GDAKF transductive; DEAP 63.85
+EEG-0151,2,2,2,1,1,1,2,2,2,0,1,2,18,24,75.0,Moderate,no,,"HEAT transductive; SEED 95.37/5.17 (high), SEED-IV 82.50/9.28, DEAP-V/A 72.6"
+EEG-0152,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"sex-diff inductive; SEED 81.5/7.8, SEED-IV 74.6/8.3, SEED-V 78.1"
+EEG-0153,2,2,2,1,1,1,1,2,2,0,1,2,17,24,70.8,Moderate,no,,"MFA-LR transductive; per-session (best SEED 89.11/7.72, avg 85.27); SEED-IV 69.58"
+EEG-0154,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"MG-DA transductive; cross-subject SEED 90.17/4.27, SEED-IV 77.55/8.05"
+EEG-0155,2,2,2,1,1,1,2,2,2,0,1,2,18,24,75.0,Moderate,no,,"MGFKD semi-supervised 1-shot; SEED 87.51/7.68, SEED-IV 68.79/8.25"
+EEG-0156,2,1,2,1,1,1,1,2,2,0,1,2,16,24,66.7,Moderate,no,,"MGGL subject-independent SEED 90.15/2.11, SEED-IV 67.34/4.64, DEAP 64.87/4.83 (label-fraction ambiguity)"
+EEG-0157,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,MSDA-Net multimodal transductive; cross-subject SEED 83.08
+EEG-0158,2,1,1,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,MetaAN meta-learning target adaptation; SEED 94.08 SEED-IV 86.78
+EEG-0159,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,GCPONet+MERNet subject-independent SEED 87.41
+EEG-0160,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"ADA-MSTFC adversarial DA; SEED 92.15, SEED-IV 81.94"
+EEG-0161,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"MS-DCDA transductive; cross-subject SEED 88.75/8.89, SEED-IV 74.34/10.62 (mean)"
+EEG-0162,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"DiFLM multi-source DA; cross-subject SEED 91.65/2.91, SEED-IV 73.92/6.04"
+EEG-0163,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"domain-separation adversarial DA; cross-subject SEED 91.68/7.34, SEED-IV 76.70; DREAMER"
+EEG-0164,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"C2PCI-Net multimodal EEG+eye LOSO; SEED-IV 71.94/8.80, SEED-V 84.83/1.05"
+EEG-0165,2,0,0,0,0,1,1,1,1,0,0,2,8,24,33.3,Low,no,,PDC+ResNet claimed LOSO 94-96% on 5-class -> leakage suspect
+EEG-0166,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"CDSCN spiking transductive; SEED 87.02, SEED-IV 64.48"
+EEG-0167,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"PconvCapsNet subject-independent DEAP 76.13/74.01, DREAMER 69.32/68.51"
+EEG-0168,2,2,1,1,1,1,2,1,2,0,1,2,16,24,66.7,Moderate,no,,"SCSTM style transfer; SEED 82.29, DEAP 79.47 (high), SEED-IV 56.46"
+EEG-0169,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"SACNN driver transductive; SEED 87.07, DEAP 67.99"
+EEG-0170,2,2,2,1,1,1,2,1,1,0,2,2,17,24,70.8,Moderate,no,,"multi-channel voting subject-independent; SEED-IV 76.66, SEED-V 78.12"
+EEG-0171,2,2,2,2,2,2,2,2,2,1,2,2,23,24,95.8,High,no,,Sneaky-emotions methodological leakage study (partition -> 50-90% swing); strong reporting
+EEG-0172,2,0,0,0,0,1,0,1,1,0,0,2,7,24,29.2,Low,no,,Bayesian-DGCNN claimed subject-independent SEED 98.51/DEAP 98.32 -> leakage suspect
+EEG-0173,2,2,2,1,1,1,1,1,2,0,2,2,17,24,70.8,Moderate,no,,"SS-EMERGE SSL LOSO; SEED 92.35, SEED-IV 81.51"
+EEG-0174,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,Fusion multi-domain inductive LOSO; SEED 71.14/6.97
+EEG-0175,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,MSSA subspace alignment transductive; SEED 79.61
+EEG-0176,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"DSSA Net subject-independent; SEED 87.03/5.97, SEED-IV 75.86/7.18"
+EEG-0177,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Dynamic-energy Bi-LSTM honest LOSO SEED 3-class 69.76 (abstract 89.42=10-fold)
+EEG-0178,1,1,1,0,1,1,0,1,1,0,0,2,9,24,37.5,Low,no,,CNN-BiLSTM DC-IGN near-ceiling SEED 94.35/1.26 + fine-tune -> leakage suspect; PDF-verify
+EEG-0179,1,2,2,1,1,2,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"Conditional TL (Lin&Jung 2017) foundational cross-subject TL, custom dataset, delta improvements"
+EEG-0180,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,TDANN two-level DA transductive SEED 87.9; self-built 4-class 56.88
+EEG-0181,2,2,2,1,1,1,2,1,2,1,2,2,19,24,79.2,Moderate,no,,MindLink-Eumpy toolbox subject-independent LSTM DEAP V 78.56 / A 77.22
+EEG-0182,2,2,2,1,1,1,2,2,1,1,2,2,19,24,79.2,Moderate,no,,Portable headset (Garg) LOSO regression RMSE; not accuracy -> narrative
+EEG-0183,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,MSJDA multi-source transductive cross-subject SEED 83.60/7.82
+EEG-0184,2,1,0,0,0,1,0,1,1,0,0,2,8,24,33.3,Low,no,,SPSP-STSA DEAP subject-independent 98.44% (binary) -> leakage suspect
+EEG-0185,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"SSTM-IS few-shot target-calibration SEED 86.78/6.65, SEED-IV 82.55/8.48"
+EEG-0186,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"STGATE inductive LOSO SEED 90.37/6.18, SEED-IV 76.43/5.01, DREAMER 76.35/8.40"
+EEG-0187,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"DFF-Net few-shot fine-tuning SEED 93.37/1.88 (F), SEED-IV 82.32"
+EEG-0188,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"MS-DA sample-hybrid transductive SEED 90.27/5.56, SEED-IV 73.41/8.27"
+EEG-0189,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"DSP-EmotionNet transductive SEED 82.5, SEED-IV 65.9 (no SD)"
+EEG-0190,1,1,1,0,1,1,1,1,1,0,0,2,10,24,41.7,Low,no,,Dynamic brain functional networks DEAP 94.69 cross-subject suspect; PDF-verify
+EEG-0191,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"DSP-MCF domain generalization SEED 89.76, SEED-IV 77.02 (no SD)"
+EEG-0192,2,2,2,1,1,1,1,1,2,0,1,2,16,24,66.7,Moderate,no,,Latent-factor autoencoder cross-subject DEAP; number pending PDF-verify
+EEG-0193,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Multi-Source Co-adaptation LOSO/cross-dataset; numbers pending PDF-verify
+EEG-0194,2,2,2,1,1,1,2,1,2,0,1,2,17,24,70.8,Moderate,no,,LMA cross-dataset SEED->DEAP 74.57 (protocol E narrative)
+EEG-0195,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Stimulated-region channel transfer LOSO; numbers pending PDF-verify
+EEG-0196,2,2,1,1,1,1,2,1,2,0,1,2,16,24,66.7,Moderate,no,,Brain-connectivity DA residual DEAP SI valence 88.28/arousal 87.66 (high-end)
+EEG-0197,1,2,2,1,1,1,2,2,2,0,1,2,17,24,70.8,Moderate,no,,"LDG domain generalization 75.06/4.97; dataset-cell ambiguous, PDF-verify"
+EEG-0198,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"C-PDDM UDA single-session LOSO SEED 86.49/5.20, SEED-IV 72.88/6.02"
+EEG-0199,2,2,2,1,1,1,2,2,1,0,2,2,18,24,75.0,Moderate,no,,"Source microstate custom 13-subj cross-subject SVM 84.90/8.24, 87.43/7.54"
+EEG-0200,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"MISNet multi-source transductive LOSO SEED 88.80, SEED-IV 74.60 (no agg SD)"
+EEG-0201,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Discriminative possibilistic clustering cross-domain; numbers pending PDF-verify
+EEG-0202,2,1,0,0,1,1,0,1,1,0,0,2,9,24,37.5,Low,no,,Multimodal physiological DEAP 92.5/93.75 subject-dependent (not cross-subject)
+EEG-0203,2,2,2,2,1,1,2,2,2,0,2,2,20,24,83.3,High,no,,"Deep possibilistic clustering UDA single-session LOSO SEED 87.83/4.21, SEED-IV 75.31/6.22"
+EEG-0204,2,2,1,1,1,1,2,1,2,0,1,2,16,24,66.7,Moderate,no,,"RS-STGCN transductive LOSO SEED 88.00, SEED-IV 85.43 (high-end, no SD)"
+EEG-0205,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,MSGM graph-Mamba subject-independent LOSO SEED 83.43/11.42
+EEG-0206,2,2,2,1,1,1,2,2,1,0,2,2,18,24,75.0,Moderate,no,,Temporal-patterns ensemble subject-independent 5-fold custom 42-adult 87.42/2.13
+EEG-0207,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,DASRC sparse-rep cross-subject+cross-dataset; numbers pending PDF-verify
+EEG-0208,1,1,2,1,1,1,2,2,2,0,1,2,16,24,66.7,Moderate,no,,MSMRA multi-source cross-subject/cross-session column ambiguous; PDF-verify
+EEG-0209,2,2,2,1,1,1,2,1,1,0,2,2,17,24,70.8,Moderate,no,,Facial-microexpr+EEG+physio multimodal LOSO DEAP V 69.2
+EEG-0210,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Transfer dictionary-pair across-subject; numbers pending PDF-verify
+EEG-0211,1,1,0,0,1,1,0,1,1,0,0,2,8,24,33.3,Low,no,,"Asymmetry-feature relevance study, subject-dependent (not cross-subject benchmark)"
+EEG-0212,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"Channel-selection subject-independent SEED 79.3[76-82.5], SEED-IV 69.5, SEED-V 60.7 (CI)"
+EEG-0213,2,2,2,1,1,1,2,2,2,0,1,2,18,24,75.0,Moderate,no,,DGAT inductive LOSO SEED 90.03/4.28 (DEAP SI 84.27/83.84 high-end narr)
+EEG-0214,1,1,1,0,1,1,0,1,1,0,0,2,9,24,37.5,Low,no,,Dual-branch adaptive transformer SEED 94.39/SEED-IV 89.78 leakage suspect; PDF-verify
+EEG-0215,2,2,2,1,1,1,2,1,2,0,1,2,17,24,70.8,Moderate,no,,Hierarchical BiGRU cross-subject group-10-fold DEAP 85.65/85.45 (high-end)
+EEG-0216,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"HMNN 3D-MLP LOSO DEAP 63.69/60.03, DREAMER 62.51/64.49, SEED-IV 62.29 (no SD)"
+EEG-0217,1,1,1,0,1,1,1,1,1,0,0,2,10,24,41.7,Low,no,,Graph-smooth spatiotemporal attention subject-dependent 10-fold (number not isolated)
+EEG-0218,2,2,2,1,1,1,2,1,1,0,2,2,17,24,70.8,Moderate,no,,tiny-MMDNet multimodal cross-subject (DEAP/MAHNOB/AMIGOS); number not isolated
+EEG-0219,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"BiHDM bi-hemispheric subject-independent SEED 91.07, SEED-IV 72.22 (DUP-FLAG, no SD)"
+EEG-0220,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,3D-LSTM local-domain-discriminator DANN LOSO; numbers pending PDF-verify
+EEG-0221,1,1,2,1,1,1,1,1,1,0,1,2,13,24,54.2,Low,no,,PA-CRNN personality-guided; improvement deltas only; PDF-verify
+EEG-0222,2,1,0,0,1,1,0,1,1,0,0,2,9,24,37.5,Low,no,,Pre-activation residual SEED 99.51/SEED-IV 97.51 subject-dependent 0.125s LEAKAGE EXHIBIT
+EEG-0223,2,2,2,1,1,1,2,1,2,0,1,2,17,24,70.8,Moderate,no,,"RFW-4DCRNN subject-independent SEED 91.12, DEAP 81.70 high-end (no SD)"
+EEG-0224,2,2,2,1,1,1,2,1,2,0,1,2,17,24,70.8,Moderate,no,,"AM-ConvBLS transductive SEED 92.1, SEED-IV 83.2, SEED-V 83.7 high-end (no SD)"
+EEG-0225,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"Unified-physiological cross-dataset multimodal AMIGOS 85.75, DECAF 71.9/60.5"
+EEG-0226,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,"AdamGraph SEED 91.86/96.65 config-ambiguous, MPED 40.29; PDF-verify"
+EEG-0227,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"ADANN transductive cross-subject SEED 91.92/5.44, SEED-IV 73.95/9.08"
+EEG-0228,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Adversarial-DA emotion-transfer UDA; numbers pending PDF-verify
+EEG-0229,1,1,2,1,1,1,1,1,1,0,1,2,13,24,54.2,Low,no,,Transfer-learning aBCI; own result not isolated; PDF-verify
+EEG-0230,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"MS-KTF few-shot fine-tune SEED 96.43/9.23 (F, high-end), SEED-IV 87.34/9.89"
+EEG-0231,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"BF-GCN cognitive-prior transductive subject-independent SEED 93.06/5.12, SEED-IV 82.03"
+EEG-0232,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,Efficient-LSTM cross-subject/subject-dependent ambiguous; PDF-verify
+EEG-0233,1,1,0,0,1,1,0,1,1,0,0,2,8,24,33.3,Low,no,,Gender-specific multiscale SI SEED 98.21/DREAMER 98.78 near-ceiling LEAKAGE SUSPECT
+EEG-0234,1,1,2,1,1,1,2,1,2,0,1,2,15,24,62.5,Moderate,no,,AsEmo subject-independent number discrepant (60.36 vs 84.20); PDF-verify
+EEG-0235,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"Attention-transformer cross-dataset SEED 88.83, DEAP 65.04 (no SD)"
+EEG-0236,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,"TQWT subbands subject-independent 86.67 (80:20 tenfold, dataset unclear)"
+EEG-0237,2,2,2,1,1,1,2,1,2,0,1,2,17,24,70.8,Moderate,no,,"BAFNet transductive LOSO SEED 93.93, SEED-IV 85.83 high-end (no SD)"
+EEG-0238,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"BGAN subject-independent SEED 85.4, SEED-V 90.7, localized SEED variant result omitted"
+EEG-0239,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,CFDA-CSF multimodal (EEG+eye) cross-subject SEED 93.05/SEED-IV 91.41/SEED-V 93.40
+EEG-0240,2,2,2,1,1,1,2,1,2,2,2,2,20,24,83.3,High,no,,"CLDAE contrastive+DA cross-subject SEED-IV 75.29, DEAP 70.15 (code available)"
+EEG-0241,2,2,2,1,1,1,2,1,1,1,2,2,18,24,75.0,Moderate,no,,CTFear fear-intensity VR cross-subject F1 0.80/0.64/0.55 (niche)
+EEG-0242,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,CiABL broad-learning cross-subject one-to-one SEED 87.10 (no SD)
+EEG-0243,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"CMSLNet multimodal (EEG+eye) cross-subject SEED-IV 83.15, SEED-V 87.32"
+EEG-0244,2,2,1,1,1,1,2,1,2,0,2,1,16,24,66.7,Moderate,no,,"Personalized cross-DAY SEED 82.28 (cross-session, not cross-subject)"
+EEG-0245,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Cross-cultural multimodal EEG+eye LOSO; number not isolated
+EEG-0246,2,2,1,1,1,1,2,1,2,0,2,1,16,24,66.7,Moderate,no,,"Cross-SESSION joint-label SEED-IV 83.89, SEED-V 81.90 (not cross-subject)"
+EEG-0247,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Channel-selection Relief+CNN cross-subject DEAP delta +2.71/+1.96
+EEG-0248,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Semisupervised multisource few-shot SEED 93.55/SEED-IV 87.96 (no SD)
+EEG-0249,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Domain-similarity transfer UDA; numbers pending PDF-verify
+EEG-0250,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"Flexible analytic wavelet cross-subject SEED 83.33, DEAP 59.06 (no SD)"
+EEG-0251,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Multimodal hybrid fusion cross-subject DEAP LOSO 72.18 (EEG+peripheral)
+EEG-0252,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,DAST surfaced retrieval mAP 66.40; classification acc pending PDF-verify
+EEG-0253,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,DISD-Net multimodal EEG+face cross-subject DEAP 75.00/7.68
+EEG-0254,2,2,2,1,1,1,2,1,1,0,2,2,17,24,70.8,Moderate,no,,DTHFormer fine-grained CEAP custom LOSOCV; number not isolated
+EEG-0255,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Data-distribution-evolution limited-data cross-subject; numbers pending PDF-verify
+EEG-0256,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,Meta-transfer few-shot SEED-IV 61.2/8.3 (F)
+EEG-0257,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"Deep-rep assisted-DA transductive SEED 93.05/4.36, SEED-IV 85.62/4.22"
+EEG-0258,2,1,0,0,1,1,1,2,2,0,0,2,12,24,50.0,Low,no,,Dense-graph cross-attention MULTIMODAL subject-dependent SEED-IV 88.24/2.31
+EEG-0259,2,1,0,0,1,1,0,1,1,0,0,2,9,24,37.5,Low,no,,Ensemble-DL DEAP 98.76/MAHNOB 98.86 LEAKAGE EXHIBIT
+EEG-0260,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Discriminative joint knowledge transfer online; numbers pending PDF-verify
+EEG-0261,2,2,2,1,1,1,2,1,1,0,2,2,17,24,70.8,Moderate,no,,Fuzzy transfer resting-state custom BHE-EMO 67.00/DENS 62.91
+EEG-0262,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Distillation DG cross-dataset; numbers pending PDF-verify
+EEG-0263,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"DA latent-rep-similarity transductive SEED 84.47, DEAP 60.38 (no SD)"
+EEG-0264,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"DAGRLP label-propagation transductive SEED 77.23/6.12, SEED-IV 65.30/4.21"
+EEG-0265,2,2,2,2,2,2,2,2,2,1,2,2,23,24,95.8,High,no,,DA comparative-study benchmark SEED 54.73/12.80 (DA underperforms; supports thesis)
+EEG-0266,2,2,2,1,1,1,2,1,1,0,2,2,17,24,70.8,Moderate,no,,DuA dual-attentive custom long-term 50-subj LOSO; number not isolated
+EEG-0267,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Dynamic-stream-selection subject-independent; numbers pending PDF-verify
+EEG-0268,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"Dynamic-attention state-transition transductive LOSO SEED 88.1/3.6, SEED-V 73.6/12.7, FACED 67.9/7.3"
+EEG-0269,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,DCGNN 10-fold+LOSO mixed; cross-subject row pending PDF-verify
+EEG-0270,1,1,0,0,1,1,0,1,1,0,0,2,8,24,33.3,Low,no,,Coupled scale-invariant DA DREAMER 98.00/DEAP 98.41 cross-dataset LEAKAGE EXHIBIT
+EEG-0271,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,3D-feature dilated FCN tenfold+LOSO mixed; cross-subject row pending PDF-verify
+EEG-0272,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"SBLEST sparse-Bayesian transductive LOSO SEED 82.51, SEED-IV 69.47 (no SD)"
+EEG-0273,2,1,0,0,1,1,0,1,1,0,0,2,9,24,37.5,Low,no,,Multi-axis adapter transformer SEED 99.47/SEED-IV 98.53 subject-dependent LEAKAGE EXHIBIT
+EEG-0274,2,1,0,0,1,1,1,1,2,0,0,2,11,24,45.8,Low,no,,Trainable-adjacency graph subject-dependent 10-fold deltas (not cross-subject)
+EEG-0275,1,1,0,0,1,1,1,1,1,0,0,2,9,24,37.5,Low,no,,EEG music-listening subject-dependent 10-fold (not cross-subject)
+EEG-0276,2,2,2,2,1,1,2,2,2,0,2,2,20,24,83.3,High,no,,"EMO-CARE rigorous LOSO SEED 94.27 (IQR 92.8-95.9), SEED-V 91.23, DREAMER 84.33"
+EEG-0277,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Semi-supervised sample/feature mining cross-session; pending PDF-verify
+EEG-0278,1,1,0,0,1,1,1,1,1,0,0,2,9,24,37.5,Low,no,,Iterative-filtering EMD subject-dependent (not cross-subject)
+EEG-0279,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,CSP selected-EEG; 92.15 was cited prior work; own result pending PDF-verify
+EEG-0280,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Few-channel DFA fine-tune cross-subject SEED-V 82.67 (F)
+EEG-0281,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Multimodal regularized deep fusion LOSO; number not isolated
+EEG-0282,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,3D-EEGU-Net SEED 92.34/DEAP 72.02 protocol unclear (no SD)
+EEG-0283,2,1,0,0,1,1,1,1,1,0,0,2,10,24,41.7,Low,no,,Wavelet synchrosqueezing ensemble ten-fold subject-dependent SEED 78.14
+EEG-0284,2,2,2,1,1,1,2,1,1,0,2,2,17,24,70.8,Moderate,no,,Dynamic-FC PLI subject-independent SEED beta 87.03 (no SD)
+EEG-0285,1,1,0,0,1,1,1,1,1,0,0,2,9,24,37.5,Low,no,,Multilevel multidomain fusion 10-fold subject-dependent (not cross-subject)
+EEG-0286,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,EmotionMIL LOSO DEAP; accuracy pending PDF-verify
+EEG-0287,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,LAFDA-Net multimodal EEG+eye cross-subject SEED 90.04/SEED-IV 89.60/SEED-V 80.01
+EEG-0288,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Cross-dataset style-transfer MPED3->SEED3 73.51 (protocol E)
+EEG-0289,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Sparse dynamic graph CNN cross-subject SEED 86.51/SEED-IV 61.72 (no SD)
+EEG-0290,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Personality-enhanced generalization; numbers pending PDF-verify
+EEG-0291,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Evolutionary ensemble cross-subject; numbers pending PDF-verify
+EEG-0292,2,2,1,1,1,1,2,2,2,0,2,2,18,24,75.0,Moderate,no,,Intrinsic-neighborhood DA transductive SEED 95.69/5.24 (very high-end SOTA claim)
+EEG-0293,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Cloud-edge-client transfer; number pending PDF-verify
+EEG-0294,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,"FLDNet few-shot SEED 89.91, DREAMER 90.28 (no SD)"
+EEG-0295,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Frame-level teacher-student privacy; number pending PDF-verify
+EEG-0296,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Regional-to-global hierarchical ST; number pending PDF-verify
+EEG-0297,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Freq+brain-connectivity fusion; number pending PDF-verify
+EEG-0298,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,GDDN graph-disentangle transductive SEED 92.54/SEED-IV 75.65/MPED 29.44 (no SD)
+EEG-0299,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,GFIL importance-analysis per-emotion (aggregate not isolated)
+EEG-0300,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,GLADA global-local associative DA; number pending PDF-verify
+EEG-0301,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,GMCDA multisource conditional DA SEED 90.33-93.26/SEED-IV 62.83-67.06 (no SD)
+EEG-0302,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Generalized contrastive partial-label; number pending PDF-verify
+EEG-0303,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,Graph-embedded CNN image-based; number pending PDF-verify
+EEG-0304,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Grop graph-orthogonal transductive LOSO SEED 88.83 (no SD)
+EEG-0305,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Gusa unsupervised subdomain adaptation LOSO SEED ~91.14 (no clean SD)
+EEG-0306,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,HIA-Net multimodal few-shot; number not isolated
+EEG-0307,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Hybrid source-selection transductive SEED 77.17/SEED-IV 58.51 (no SD)
+EEG-0308,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Deep-metric+semisup+DA cross-dataset SEED->SEED-IV 63.49
+EEG-0309,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Joint feature-transfer semisupervised; number pending PDF-verify
+EEG-0310,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Joint feature-adapt label-propagation one-to-one SEED-IV 83.3 (no SD)
+EEG-0311,1,1,0,0,1,1,1,1,1,0,0,2,9,24,37.5,Low,no,,Label-feature co-learning facial+EEG multimodal subject-dependent (not cross-subject)
+EEG-0312,2,2,2,2,2,2,2,2,2,1,2,2,23,24,95.8,High,no,,LibEER benchmark library KEY standardization reference (narrative)
+EEG-0313,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Lightweight asymmetric multimodal MAHNOB LOSO V 73.9/A 66.8
+EEG-0314,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,RMDA Riemannian subject-dep/indep attribution unclear; PDF-verify
+EEG-0315,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,M3D manifold DA transductive cross-subject SEED 84.57/9.49 (dataset-assumed)
+EEG-0316,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,MASTF-net multi-source DA; number pending PDF-verify
+EEG-0317,2,1,0,0,1,1,1,2,1,0,0,2,11,24,45.8,Low,no,,MECAM subject-independent SEED 97.92/2.39 near-ceiling LEAKAGE EXHIBIT
+EEG-0318,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,MILFNet own vs cited unclear; PDF-verify
+EEG-0319,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,MIND-EEG codebook; number pending PDF-verify
+EEG-0320,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,MMDA multimodal multisource DA; number not isolated
+EEG-0321,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,MS-FRAN multi-source DA; number pending PDF-verify
+EEG-0322,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,MTADA multi-task adversarial DA FACED 44.37/DEAP 69.06/SEED-IV 76.39 (no SD)
+EEG-0323,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,MetaEmotionNet meta-learning few-shot; number pending PDF-verify
+EEG-0324,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,Mifu-ER multimodal modality-quality fusion; number not isolated
+EEG-0325,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Modality/subject-aware KD multimodal SEED 93.37/SEED-IV 82.32 (matches DFF-Net; dup-flag)
+EEG-0326,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,Multi-domain dynamic graph; DEAP 95.77 subject-dep; subject-indep cell PDF-verify
+EEG-0327,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Multi-modal EEG+eye SEED 92.41/SEED-IV 85.60/SEED-V 86.29 (multimodal)
+EEG-0328,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Multi-modal DA VAE SEED 89.64/SEED-IV 73.82 (multimodal)
+EEG-0329,2,2,1,1,1,1,2,1,2,0,2,1,16,24,66.7,Moderate,no,,Multi-scale masked AE cross-SESSION SEED 80.86 (not cross-subject)
+EEG-0330,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Multi-source dictionary learning; improvement deltas; PDF-verify
+EEG-0331,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Multi-source reinforced selective DA; improvement deltas; PDF-verify
+EEG-0332,2,2,2,1,1,1,2,1,1,0,2,2,17,24,70.8,Moderate,no,,MFMC multimodal/EDA CEAP-360VR subject-independent 33.1 (custom)
+EEG-0333,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Multimodal behavioral+physio LOSO; number not isolated
+EEG-0334,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Multimodal semi-sup cross-modal DA SEED-IV 92.50-96.13 (cross-session)
+EEG-0335,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Multimodal discriminative across-individuals; improvement deltas
+EEG-0336,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Mutual-info disentanglement DA transductive SEED 90.38 (no clean SD)
+EEG-0337,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Neuron-perception contrastive LOSO; number pending PDF-verify
+EEG-0338,2,1,0,0,1,1,0,1,1,0,0,2,9,24,37.5,Low,no,,Normal-inverse-Gaussian CSV SEED 93.23/DEAP 94.87/SEED-IV 95.58 near-ceiling LEAKAGE EXHIBIT
+EEG-0339,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,PGCN SEED 96.93 subject-dep; subject-indep cell PDF-verify
+EEG-0340,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"PR-PL unsupervised cross-subject SEED 85.56/4.78, SEED-IV 74.92/7.92 (semi-sup 93.18/6.55)"
+EEG-0341,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Personal-Zscore normalization LOSO; absolute pending PDF-verify
+EEG-0342,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Prompt-guided domain-generalization SEED 89.63/89.88 (no SD)
+EEG-0343,2,2,1,1,1,1,2,2,2,0,2,2,18,24,75.0,Moderate,no,,"Prototypical-contrastive temporal-GCN transductive SEED 97.61/8.10 (high-end outlier), SEED-IV 86.31/11.10"
+EEG-0344,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Q-RoFormer transductive SEED 93.47/SEED-IV 79.12 (no SD)
+EEG-0345,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,Quantifying-emotional-patterns 89.23/1.93 own/cited+protocol unclear; PDF-verify
+EEG-0346,1,1,1,0,1,1,1,1,1,0,1,2,11,24,45.8,Low,no,,REGEEG regression LOSO+subject-dependent; not poolable; number not isolated
+EEG-0347,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,SECT shifted-channel transformer SEED 85.43/DEAP 66.83 protocol ambiguous (no SD)
+EEG-0348,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,SEmotion knowledge-guided transductive SEED-IV 64.11 (no SD)
+EEG-0349,1,1,1,0,1,1,1,1,1,0,1,1,10,24,41.7,Low,no,,ST-SNN-DSFE spiking net subject-dependent; not cross-subject
+EEG-0350,2,2,2,2,1,2,2,2,2,0,2,2,21,24,87.5,High,no,,"STRAViT LOSO subject-independent SEED 87.2/5.7, SEED-IV 72.5/6.6 (subject-dep 98.7/95.5 separate)"
+EEG-0351,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,STRFLNet cross-subject cell pending PDF-verify
+EEG-0352,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,Self-weighted semi-supervised; cross-subject SD pending PDF-verify
+EEG-0353,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"Semi-supervised dual-stream SEED 78.71/6.52, SEED-IV 64.03/8.60, SEED-V 53.32/10.95 (protocol F)"
+EEG-0354,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,S2A2-MSDA cross-subject SEED 90.11/SEED-IV 76.23; Table-I SD garbled -> PDF-verify before pooling
+EEG-0355,1,2,2,1,1,1,1,1,2,0,1,2,15,24,62.5,Moderate,no,,Sub-band embedding SEED-IV LOSO 74.77 (no SD) -> narrative
+EEG-0356,1,1,1,0,1,1,1,1,1,0,1,1,10,24,41.7,Low,no,,Subject-dependent multidimensional features; not cross-subject
+EEG-0357,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Dynamic empirical CNN subject-independent; cell pending PDF-verify
+EEG-0358,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,TAHAG LOSO SEED-IND 91.07/4.09 (meta); SEED-IV-IND 76.88 SD pending; SEED-IV-DEP 86.05 subject-dep (excl)
+EEG-0359,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,TS-CNN-LSTM mixed/cross-subject + cited numbers intermixed; PDF-verify
+EEG-0360,1,1,1,0,1,1,1,1,1,0,1,1,10,24,41.7,Low,no,,Auditory encoding model; not cross-subject classification -> narrative
+EEG-0361,1,2,2,1,1,1,1,1,2,0,1,2,15,24,62.5,Moderate,no,,"Hierarchical-spatial transformer honest-low LOSO (MAHNOB 66.20/66.63, DEAP 58.03; no SD)"
+EEG-0362,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"Ugan source-only DG LOSO SEED 93.11/4.13 (high-end flag), SEED-IV 77.16/4.73, SEED-V 77.12/10.87"
+EEG-0363,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Multimodal cross-subject few-shot (excluded EEG-only meta)
+EEG-0364,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Unsupervised time-aware sampling RL; cell pending PDF-verify
+EEG-0365,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Multimodal subject-independent gender study (excluded EEG-only meta)
+EEG-0366,1,1,1,1,1,1,1,1,1,0,1,1,11,24,45.8,Low,no,,Multimodal bio-sensing + vision (excluded EEG-only meta)
+EEG-0367,1,1,2,1,1,1,2,1,2,0,1,2,15,24,62.5,Moderate,no,,MTKDDP source-free/privacy KD subject-independent; cells pending PDF-verify
+EEG-0368,2,2,2,1,1,2,2,2,2,0,2,2,20,24,83.3,High,no,,"Knowledge-driven self-supervised LOSO SEED 84.48/5.79, DREAMER A 67.64/6.35 V 68.63/7.77"
+EEG-0369,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"MBEER multi-branch cross-subject SEED 92.10/6.14 (high-end), SEED-IV 83.57/6.76; DEAP-A 59.59"
+EEG-0370,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Prototype SPD/Riemannian DA + few-shot calib; absolute cells pending PDF-verify
+EEG-0371,1,1,1,0,1,1,1,1,1,0,1,1,10,24,41.7,Low,no,,Echo-state-net transfer subject-dependent + multimodal; not poolable
+EEG-0372,2,1,0,0,1,1,0,1,1,0,0,2,9,24,37.5,Low,no,,Lightweight embedded DEAP subject-indep V 90.76 / A 90.94 near-ceiling LEAKAGE EXHIBIT
+EEG-0373,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,CONLEAD contrastive few-shot/UDA; body unextractable (OA watermark); PDF-verify
+EEG-0374,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"CMTCF ChannelMix unsupervised SEED 93.80/4.96 (high-end), SEED-IV 79.37/6.05, SEED-VII 49.13/8.22"
+EEG-0375,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Facial + EEG multimodal (excluded EEG-only meta)
+EEG-0376,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Cross-individual audio-visual multimodal (excluded EEG-only meta)
+EEG-0377,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Linear DA batchnorm/depthwise; merged delta table; PDF-verify
+EEG-0378,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"FBAGAN adversarial LOSO SEED 88.17/4.88, SEED-IV 77.35/3.72 (col-attribution flagged)"
+EEG-0379,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,DA-CapsNet adversarial unsupervised cross-subject SEED ~84.63/9.09; SEED-IV ambiguous -> PDF-verify
+EEG-0380,2,1,0,1,1,1,1,1,2,0,0,2,12,24,50.0,Low,no,,Deep-FPN DEAP LOSO 96.97/94.29 inconsistent w/ per-subject 70-94 LEAKAGE SUSPECT; PDF-verify
+EEG-0381,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,EEG-tNIRS multimodal (excluded EEG-only meta)
+EEG-0382,2,2,2,1,1,1,2,1,2,0,1,2,17,24,70.8,Moderate,no,,BiDCNN subject-indep DEAP V 68.14/A 63.94 honest (no SD); subject-dep 94.38/94.72 separate; DISTINCT from BiHDM/EEG-0219
+EEG-0383,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"DANN+pseudo-label cross-subject SEED 94.45/4.50 (high-end), SEED-IV 81.68/7.29, DEAP 66.50/67.42"
+EEG-0384,2,2,2,1,1,1,2,1,2,0,2,2,18,24,75.0,Moderate,no,,Dual-filtration LOSO SEED 88.68/SEED-IV 67.61/DEAP 65.33/SEED-V 65.57 honest; SD pending PDF-verify
+EEG-0385,2,2,2,1,1,1,2,2,1,0,2,2,18,24,75.0,Moderate,no,,Dynamic-entropy SEED LOSO 83.33/10.16 (18-feat); DySampEns 64.15/10.71
+EEG-0386,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,DSDirGCN-AM SEED LOSO 93.19/3.41 (high-end); SEED-IV pending PDF-verify
+EEG-0387,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,HCI attentional; OA body unextractable; PDF-verify
+EEG-0388,1,1,1,0,1,1,1,1,1,0,1,2,11,24,45.8,Low,no,,Attention pretrained capsule 10-fold subject-dependent; not cross-subject
+EEG-0389,2,1,0,1,1,1,1,1,1,0,0,2,11,24,45.8,Low,no,,mvFIF subspace-KNN 98-99% near-ceiling claimed LOSOCV LEAKAGE EXHIBIT
+EEG-0390,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,EEG-RegNet continuous-VAD regression; not poolable as accuracy
+EEG-0391,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,GCN dual-attention; Frontiers body watermark-only; PDF-verify
+EEG-0392,1,2,2,1,1,1,1,1,1,0,1,2,14,24,58.3,Low,no,,Feature-fusion DEAP LOSO valence 80.52 / arousal 75.22 (no SD) -> narrative
+EEG-0393,2,2,2,1,1,1,2,2,1,0,2,2,18,24,75.0,Moderate,no,,"EmoDNCL+ LOSO SEED 93.60/4.29 (high-end), SEED-IV 79.32/5.12"
+EEG-0394,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,CWT+ensemble-CNN multimodal/fine-tune (excluded EEG-only meta)
+EEG-0395,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Dynamic-entropy+ensemble; protocol+cells pending PDF-verify
+EEG-0396,1,1,1,0,1,1,1,1,1,0,1,2,11,24,45.8,Low,no,,EEG source + dynamic functional network subject-dependent; not cross-subject
+EEG-0397,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Cross-modal EEG+facial multimodal (excluded EEG-only meta)
+EEG-0398,2,1,1,1,1,1,1,2,2,0,0,2,14,24,58.3,Low,no,,R2G-STLT DEAP subject-indep V 86.22/6.52 A 80.26/7.03 leakage-suspect-high; SEED/SEED-IV row-map PDF-verify
+EEG-0399,2,1,1,1,1,1,1,2,1,0,0,2,13,24,54.2,Low,no,,Conv-graph-attention SEED subject-indep 94.83/3.41 LEAKAGE-SUSPECT-HIGH (meta w/ flag); subject-dep 99.11 separate
+EEG-0400,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Domain-to-modality federated multimodal EEG+peripheral (excluded EEG-only meta)
+EEG-0401,2,2,2,1,1,1,1,1,1,0,1,2,15,24,62.5,Moderate,no,,Cultural-impact subject-indep cross-dataset (heterogeneity narrative); numbers PDF-verify
+EEG-0402,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Fine-grained label-propagation UDA; merged table; PDF-verify
+EEG-0403,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,FC feature-grouped attention LOSO; numbers not surfaced; PDF-verify
+EEG-0404,2,2,2,1,1,1,2,2,1,0,2,2,18,24,75.0,Moderate,no,,"GCD-JFSE cross-subject SEED 78.67/14.67, SEED-IV 58.98/10.62, DREAMER V 61.11/12.31 A 72.46/13.45"
+EEG-0405,1,2,2,1,1,1,1,2,2,0,1,2,16,24,66.7,Moderate,no,,GNN multi-source prototype LOSO; per-subject Ours visible; aggregate+-SD pending PDF-verify
+EEG-0406,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,HeteFedEEG federated cross-subject honest ~66-67 SEED (proposed cell PDF-verify); supports honest-ceiling
+EEG-0407,1,1,1,0,1,1,1,1,1,0,1,2,11,24,45.8,Low,no,,IDEA database (dataset-landscape ref); subject-dependent baselines
+EEG-0408,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,IDFG DG SEED 93.29/SEED-IV 81.32/SEED-V 79.75 means; SD pending PDF-verify
+EEG-0409,1,1,1,0,1,1,1,1,1,0,1,2,11,24,45.8,Low,no,,Interactive incremental-GP subject-dependent; not cross-subject
+EEG-0410,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Joint domain symmetry cross-dataset UDA; cells PDF-verify
+EEG-0411,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Joint multi-source multimodal missing-modality (excluded EEG-only meta)
+EEG-0412,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,LGDAAN cross-subject LOSO; proposed cell garbled; PDF-verify
+EEG-0413,2,1,1,1,1,1,1,2,1,0,0,2,13,24,54.2,Low,no,,MAS-DGAT subject-dep 10-fold 99.8 near-ceiling (leakage); subject-indep PDF-verify
+EEG-0414,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,MCF-SCA 10-fold subject-dependent + multimodal (excluded EEG-only meta)
+EEG-0415,2,1,0,1,1,1,1,1,1,0,0,2,11,24,45.8,Low,no,,MEF-net claims cross-subject but DEAP 95.91/SEED 99.33 near-ceiling LEAKAGE EXHIBIT
+EEG-0416,2,2,2,1,1,1,1,1,1,0,2,2,16,24,66.7,Moderate,no,,Multi-database integration subject-indep cross-dataset honest (DEAP ~58-65); cell PDF-verify
+EEG-0417,1,1,2,1,1,1,2,1,2,0,1,2,15,24,62.5,Moderate,no,,Multi-source decentralized federated transfer privacy BCIs; cells PDF-verify
+EEG-0418,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Multi-modal supervised DA (target labels) + multimodal (excluded EEG-only inductive meta)
+EEG-0419,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,MSGDAN multi-source graph DA transductive; cells PDF-verify
+EEG-0420,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Multimodal attention-recurrent-GCN (excluded EEG-only meta)
+EEG-0421,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,MS-Semi-STM multi-source transductive semi-sup; cells PDF-verify
+EEG-0422,1,2,2,1,1,1,1,1,2,0,1,2,15,24,62.5,Moderate,no,,NeuroSense spiking-NN LOSO; cells PDF-verify
+EEG-0423,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Optimal-EEG-features/trajectory feature-analysis (excluded EEG-only meta)
+EEG-0424,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Orthogonal semi-sup regression CROSS-SESSION (not cross-subject)
+EEG-0425,1,2,2,1,1,1,1,2,2,0,1,2,16,24,66.7,Moderate,no,,PDGCN proposed ~87-90 SEED visible; dataset/session map ambiguous; PDF-verify
+EEG-0426,2,2,2,1,1,1,1,1,2,0,2,2,17,24,70.8,Moderate,no,,PL-DCP cross-session 79.36/63.16/57.53 + cross-corpus 59.02 narrative; cross-subject LOSO PDF-verify
+EEG-0427,1,1,1,0,1,1,1,1,1,0,1,2,11,24,45.8,Low,no,,Param-efficient hierarchical ST-graph subject-dependent; not cross-subject
+EEG-0428,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,ProDG source-free DG SEED 85.9/SEED-IV 70.4 means; SD pending PDF-verify
+EEG-0429,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,"Progressive low-rank semi-sup joint DA (target labels, F); cells PDF-verify"
+EEG-0430,1,1,1,1,1,1,1,1,2,0,1,2,13,24,54.2,Low,no,,Robust bi-level self-supervised continual; cells PDF-verify
+EEG-0431,1,2,2,1,1,1,2,2,2,0,1,2,17,24,70.8,Moderate,no,,SASD-MCL partial-label cross-subject LOSO (protocol F); SD-tables exist; values PDF-verify
+EEG-0432,1,1,2,1,1,1,1,1,1,0,1,2,13,24,54.2,Low,no,,"SEDA-EEG semi-sup DA (target labels, F); relative-only +12.90%; absolute PDF-verify"
+EEG-0433,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,"SFT-SGAT LOSO SEED 92.04/3.28 (high-end), SEED-IV 82.76/4.02"
+EEG-0434,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,SIFIAE cross-session semi-sup (not cross-subject)
+EEG-0435,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,ST-SHAP LOSO + cross-dataset; cells PDF-verify
+EEG-0436,2,2,2,1,1,1,2,2,1,0,2,2,18,24,75.0,Moderate,no,,"Semi-sup pairwise MSDA (target labels, F) LOSO SEED 90.09/9.52, SEED-IV 73.08/10.33"
+EEG-0437,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Semi-sup regression adaptive-graph cross-session (not cross-subject)
+EEG-0438,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,Spatiotemporal isomorphic cross-brain UDA+few-shot; cells PDF-verify
+EEG-0439,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Spike-hammer multimodal (excluded EEG-only meta)
+EEG-0440,2,2,2,1,1,1,2,2,1,0,2,2,18,24,75.0,Moderate,no,,"Hybrid GRU-Conv subject-indep SEED 87.04, DEAP-A 70.07, DEAP-V 67.34 means; SD pending PDF-verify"
+EEG-0441,2,2,2,1,1,1,2,2,2,0,2,2,19,24,79.2,Moderate,no,,TMLP+SRDANN UDA SEED 81.04/6.28 (meta); DEAP V 61.88/A 57.70 SD pending
+EEG-0442,1,1,1,0,1,1,1,1,1,0,1,2,11,24,45.8,Low,no,,Temporal-scale heterogeneity subject-dependent + multimodal; not cross-subject
+EEG-0443,1,2,2,1,1,1,2,2,2,0,1,2,17,24,70.8,Moderate,no,,UDA-DDA LOSO CS-SS clean protocol; proposed cells PDF-verify
+EEG-0444,1,1,2,1,1,1,1,1,2,0,1,2,14,24,58.3,Low,no,,UMDA-DDSTGN meta-DA few-shot; subject-indep SEED ~82.16/5.23 candidate; PDF-verify
+EEG-0445,2,1,0,1,1,1,1,1,1,0,0,2,11,24,45.8,Low,no,,VAE-CapsNet 'Loso'=leave-one-SESSION-out (cross-session) mislabeled cross-subject TERMINOLOGY EXHIBIT
+EEG-0446,1,1,1,1,1,1,1,1,1,0,1,2,12,24,50.0,Low,no,,Visual-to-EEG cross-modal KD continuous multimodal (excluded EEG-only meta)

@@ -1,0 +1,19 @@
+{
+  "generated_on": "2026-07-04",
+  "raw_database_records": 1664,
+  "duplicates_removed": 887,
+  "unique_records_screened": 777,
+  "screening_excluded_after_adjudication": 130,
+  "screening_include_candidate_after_adjudication": 601,
+  "screening_unclear_needs_fulltext_after_adjudication": 46,
+  "reports_assessed_or_sought_after_adjudication": 647,
+  "screening_adjudicated_rows": 143,
+  "qualitative_included_studies": 404,
+  "qualitative_result_rows": 672,
+  "meta_eligible_studies": 98,
+  "meta_eligible_result_rows": 198,
+  "adjudicator_meta_rows_applied": 17,
+  "adjudicator_meta_rows_added_to_extraction_master": 0,
+  "adjudicator_meta_rows_set_no_meta": 4,
+  "reports_excluded_unobtainable_or_queued_after_fulltext": 243
+}

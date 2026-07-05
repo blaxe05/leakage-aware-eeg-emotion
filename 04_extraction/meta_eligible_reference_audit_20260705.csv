@@ -1,0 +1,99 @@
+paper_id,citation_key,doi,title,match_method
+EEG-0001,li2018,10.3389/fnins.2018.00162,Exploring EEG Features in Cross-Subject Emotion Recognition,title
+EEG-0002,rgnn,10.1109/taffc.2020.2994159,EEG-Based Emotion Recognition Using Regularized Graph Neural Networks,title
+EEG-0003,zhenglu2016,NA,Personalizing EEG-Based Affective Models with Transfer Learning,title
+EEG-0004,zhao_ppda,10.1609/aaai.v35i1.16169,Plug-and-Play Domain Adaptation for Cross-Subject EEG-based Emotion Recognition,title
+EEG-0005,dgcnn,10.1109/taffc.2018.2817622,EEG Emotion Recognition Using Dynamical Graph Convolutional Neural Networks,title
+EEG-0006,msmda,10.3389/fnins.2021.778488,MS-MDA: Multisource Marginal Distribution Adaptation for Cross-Subject and Cross-Session EEG Emotion Recognition,title
+EEG-0007,metaeeg0007,10.1109/TAFFC.2018.2885474,A Bi-Hemisphere Domain Adversarial Neural Network Model for EEG Emotion Recognition,doi
+EEG-0008,metaeeg0008,10.1109/tcds.2020.2999337,A Novel Bi-hemispheric Discrepancy Model (BiHDM) for EEG Emotion Recognition,doi
+EEG-0009,metaeeg0009,10.48550/arXiv.2507.17524,SDC-Net: A Domain Adaptation Framework with Semantic-Dynamic Consistency for Cross-Subject EEG Emotion Recognition,doi
+EEG-0010,metaeeg0010,10.48550/arxiv.2511.06782,HEDN: A Hard-Easy Dual Network with Source Reliability Assessment for Cross-Subject EEG Emotion Recognition,doi
+EEG-0014,metaeeg0014,10.3389/fnins.2021.611653,Cross-Subject EEG Emotion Recognition With Self-Organized Graph Neural Network,doi
+EEG-0015,metaeeg0015,10.1109/TNNLS.2025.3552603,EmT: A Novel Transformer for Generalized Cross-subject EEG Emotion Recognition,doi
+EEG-0016,metaeeg0016,10.1109/tnsre.2021.3111689,EEGFuseNet: Hybrid Unsupervised Deep Feature Characterization and Fusion for High-Dimensional EEG with An Application to Emotion Recognition,doi
+EEG-0017,metaeeg0017,10.1016/j.knosys.2023.110756,MTLFuseNet: A novel emotion recognition model based on deep latent feature fusion of EEG signals and multi-task learning,doi
+EEG-0020,clisa,10.1109/TAFFC.2022.3164516,Contrastive Learning of Subject-Invariant EEG Representations for Cross-Subject Emotion Recognition,title
+EEG-0021,metaeeg0021,10.48550/arXiv.2503.18998,FACE: Few-shot Adapter with Cross-view Fusion for Cross-subject EEG Emotion Recognition,doi
+EEG-0022,metaeeg0022,10.48550/arxiv.2601.15615,Region-aware Spatiotemporal Modeling with Collaborative Domain Generalization for Cross-Subject EEG Emotion Recognition (RSM-CoDG),doi
+EEG-0024,metaeeg0024,10.1109/TNNLS.2024.3493425,EEGMatch: Learning with Incomplete Labels for Semi-Supervised EEG-based Cross-Subject Emotion Recognition,doi
+EEG-0035,metaeeg0035,10.1088/1741-2552/acae06,DAGAM: A Domain Adversarial Graph Attention Model for Subject Independent EEG-Based Emotion Recognition,doi
+EEG-0043,metaeeg0043,10.48550/arxiv.2510.17475,DAMSDAN: Distribution-Aware Multi-Source Domain Adaptation Network for Cross-Domain EEG Emotion Recognition,doi
+EEG-0053,metaeeg0053,10.1016/j.eswa.2025.127348,Cross-dataset EEG emotion recognition based on pre-trained Vision Transformer considering emotional sensitivity diversity,doi
+EEG-0054,bhosale_meta,10.1016/j.bspc.2021.103289,Calibration free meta learning based approach for subject independent EEG emotion recognition,title
+EEG-0058,metaeeg0058,10.1109/ICASSP48485.2024.10446957,Cross-Subject EEG Emotion Recognition Based on Interconnected Dynamic Domain Adaptation,doi
+EEG-0059,metaeeg0059,10.1016/j.compbiomed.2021.105048,An Adversarial Discriminative Temporal Convolutional Network for EEG-Based Cross-Domain Emotion Recognition,doi
+EEG-0060,asjda,10.1109/TAFFC.2024.3514635,Enhancing EEG-Based Cross-Subject Emotion Recognition via Adaptive Source Joint Domain Adaptation,title
+EEG-0063,fddgnet,10.1016/j.neucom.2025.132368,FDDGNet: An Information Bottleneck-Inspired Feature Disentanglement Network for Cross-Subject EEG-Based Emotion Recognition,title
+EEG-0070,metaeeg0070,10.1016/j.bspc.2024.106957,A Convolution and Attention-Based Conditional Adversarial Domain Adaptation Neural Network for Emotion Recognition Using EEG,doi
+EEG-0073,bgagcn,10.1109/TAFFC.2024.3394873,Bridge Graph Attention Based Graph Convolution Network with Multi-Scale Transformer for EEG Emotion Recognition,title
+EEG-0086,metaeeg0086,10.1016/j.neucom.2026.134158,Cross-Subject EEG-Based Emotion Recognition Leveraging Multi-Source Domain Adaptation with Curriculum Learning Strategy,doi
+EEG-0087,gapdpl,10.3390/brainsci13070977,Subject-Independent EEG Emotion Recognition Based on Genetically Optimized Projection Dictionary Pair Learning,title
+EEG-0089,metaeeg0089,10.1109/TAFFC.2025.3535542,Multi-Scale Hyperbolic Contrastive Learning for Cross-Subject EEG Emotion Recognition (MSHCL),doi
+EEG-0105,metaeeg0105,10.1109/TAFFC.2026.3670697,Multi-Scale Dynamic Temporal Network With Graph Matching Domain Adaptation for Cross-Subject EEG Emotion Recognition,doi
+EEG-0106,metaeeg0106,10.1109/TCDS.2025.3545666,Cross-Subject and Cross-Session EEG Emotion Recognition Based on Multisource Structural Deep Clustering,doi
+EEG-0107,metaeeg0107,10.3390/s26103217,SCVAE-Net: Supervised Contrastive Variational AutoEncoder Network for Cross-Domain EEG Emotion Recognition,doi
+EEG-0108,metaeeg0108,10.1007/s11760-025-04819-9,Unsupervised Multi-Source Domain Adaptive Network Based on a Gating Mechanism for Cross-Subject EEG Emotion Recognition,doi
+EEG-0123,metaeeg0123,10.1016/j.bspc.2025.107550,A coupling of common-private topological patterns learning approach for cross-subject emotion recognition (CPT-LS),doi
+EEG-0127,metaeeg0127,10.1016/j.bspc.2026.110302,AST-CLNet: EEG emotion recognition based on dual-branch adaptive graph convolution and contrastive learning,doi
+EEG-0138,metaeeg0138,10.1093/cercor/bhae477,Crucial rhythms and subnetworks for emotion processing extracted by an interpretable deep model (BrainAMDANN),doi
+EEG-0139,metaeeg0139,10.1016/j.bspc.2026.109740,DDMGCN: Deep Dynamic Multi-Graph Convolutional Neural Network for EEG emotion recognition,doi
+EEG-0142,metaeeg0142,10.1016/j.eswa.2024.126028,Domain adversarial learning with multiple adversarial tasks for EEG emotion recognition (DANN-MAT),doi
+EEG-0145,metaeeg0145,10.1016/j.bspc.2026.110350,EEG-based emotion recognition using super-resolution superlet transform and self-attention CNN (SLT SA-CNN),doi
+EEG-0151,metaeeg0151,10.1016/j.bspc.2026.110299,HEAT: Hierarchical Emotion Adaptation with Progressive Thresholding for EEG Emotion (and Consciousness) Recognition,doi
+EEG-0152,metaeeg0152,10.1016/j.compbiomed.2025.110036,Impact of sex differences on subject-independent EEG-based emotion recognition models,doi
+EEG-0154,metaeeg0154,10.1016/j.aej.2025.09.013,MG-DA: Multi-branch graph convolution with domain adaptation for emotion recognition,doi
+EEG-0156,metaeeg0156,10.1016/j.asoc.2026.114855,MGGL: a multi-grained graph learning model for EEG emotion recognition,doi
+EEG-0161,metaeeg0161,10.2139/ssrn.4937543,Multi-source EEG emotion recognition via dynamic contrastive domain adaptation (MS-DCDA),doi
+EEG-0162,metaeeg0162,10.1016/j.bspc.2023.104998,Multi-source domain adaptation with spatio-temporal feature extractor for EEG emotion recognition (DiFLM),doi
+EEG-0163,metaeeg0163,10.1016/j.bspc.2025.108016,Multi-source domain separation adversarial domain adaptation for EEG emotion recognition,doi
+EEG-0174,metaeeg0174,10.31083/j.jin2301018,Fusion of Multi-domain EEG Signatures Improves Emotion Recognition,doi
+EEG-0176,metaeeg0176,10.3389/fnbot.2024.1481746,Directional Spatial and Spectral Attention Network (DSSA Net) for EEG-based emotion recognition,doi
+EEG-0183,metaeeg0183,10.3389/fnhum.2022.921346,Multi-source joint domain adaptation for cross-subject and cross-session emotion recognition from EEG (MSJDA),doi
+EEG-0185,metaeeg0185,10.3389/fnhum.2023.1132254,SSTM-IS: simplified STM method based on instance selection for real-time EEG emotion recognition,doi
+EEG-0186,metaeeg0186,10.3389/fnhum.2023.1169949,STGATE: Spatial-temporal graph attention network with a transformer encoder for EEG-based emotion recognition,doi
+EEG-0187,metaeeg0187,10.3389/fnhum.2023.1280241,Hybrid transfer learning strategy for cross-subject EEG emotion recognition (DFF-Net),doi
+EEG-0188,metaeeg0188,10.3389/fnhum.2024.1464431,Multi-source domain adaptation for EEG emotion recognition based on inter-domain sample hybridization,doi
+EEG-0198,metaeeg0198,10.3389/fnins.2023.1247082,Possibilistic distribution distance metric: a robust domain adaptation learning method (C-PDDM),doi
+EEG-0203,metaeeg0203,10.3389/fnins.2025.1592070,Domain adaptive deep possibilistic clustering for EEG-based emotion recognition,doi
+EEG-0205,metaeeg0205,10.3389/fnins.2026.1665145,MSGM: a multi-scale spatiotemporal graph Mamba for EEG emotion recognition,doi
+EEG-0212,metaeeg0212,10.3389/fpsyt.2025.1494369,Identifying relevant EEG channels for subject-independent emotion recognition using attention,doi
+EEG-0213,metaeeg0213,10.3389/fpsyt.2025.1633860,DGAT: a dynamic graph attention neural network framework for EEG emotion recognition,doi
+EEG-0227,metaeeg0227,10.1109/TAFFC.2024.3480355,Adaptive Domain Alignment Neural Networks for Cross-Domain EEG Emotion Recognition (ADANN),doi
+EEG-0230,metaeeg0230,10.1109/TAFFC.2026.3674803,An EEG-Based Multi-Source Domain Knowledge Transfer Framework for Cross-Session and Cross-Subject Emotion Recognition (MS-KTF),doi
+EEG-0231,metaeeg0231,10.1109/TNNLS.2024.3405663,An Efficient Graph Learning System for Emotion Recognition Inspired by the Cognitive Prior Graph of EEG Brain Network (BF-GCN),doi
+EEG-0256,metaeeg0256,10.1109/ACCESS.2022.3193768,Deep Neural Network for Emotion Recognition Based on Meta-Transfer Learning,doi
+EEG-0257,metaeeg0257,10.1109/TCSS.2025.3622319,Deep Representation Learning With Assisted Domain Adaptation for EEG-Based Cross-Subject Emotion Recognition,doi
+EEG-0264,metaeeg0264,10.1109/ACCESS.2024.3454082,Domain-Invariant Adaptive Graph Regularized Label Propagation for EEG-Based Emotion Recognition,doi
+EEG-0268,metaeeg0268,10.1109/TAFFC.2025.3593630,Dynamic-Attention-Based EEG State Transition Modeling for Emotion Recognition,doi
+EEG-0276,metaeeg0276,10.1109/OJCS.2026.3653766,EMO-CARE: EEG Multi-Scale Temporal Modeling With Channel-Aware Feature Attention for Robust Cross-Subject Emotion Recognition,doi
+EEG-0292,metaeeg0292,10.1109/TAFFC.2025.3564272,Exploiting the Intrinsic Neighborhood Semantic Structure for Domain Adaptation in EEG-Based Emotion Recognition,doi
+EEG-0315,metaeeg0315,10.1109/JBHI.2025.3580612,M3D: Manifold-Based Domain Adaptation With Dynamic Distribution for Non-Deep Transfer Learning in Cross-Subject and Cross-Session EEG Emotion Recognition,doi
+EEG-0340,metaeeg0042,10.1109/TAFFC.2023.3288118,PR-PL: A Novel Prototypical Representation Based Pairwise Learning Framework for Emotion Recognition,doi
+EEG-0343,metaeeg0343,10.1109/TAFFC.2026.3671020,Prototypical Contrastive Learning With Temporal Dynamic Graph Convolutional Network for EEG Emotion Recognition,doi
+EEG-0350,metaeeg0350,10.1109/TIM.2026.3701192,STRAViT: A Spatial-Temporal Feature-Reshaped Agent Vision Transformer for EEG-Based Emotion Recognition,doi
+EEG-0353,metaeeg0353,10.1109/TAFFC.2024.3433470,Semi-Supervised Dual-Stream Self-Attentive Adversarial Graph Contrastive Learning for Cross-Subject EEG Emotion Recognition,doi
+EEG-0358,metaeeg0358,10.1109/TAFFC.2025.3580787,TAHAG: Two-Stage Domain Adaptation With Hybrid Adaptive Graph Learning for EEG Emotion Recognition,doi
+EEG-0362,metaeeg0362,10.1109/TCSS.2024.3488201,Ugan: Uncertainty-Guided Graph Augmentation Network for EEG Emotion Recognition,doi
+EEG-0368,metaeeg0368,10.1016/j.neunet.2026.108676,A Knowledge-Driven Self-Supervised Learning Method for Enhancing EEG-Based Emotion Recognition,doi
+EEG-0369,metaeeg0369,10.2139/ssrn.4979156,A Multi-Branch EEG Emotion Recognition Framework Based on Cross-Subject and Cross-Session Transfer (MBEER),doi
+EEG-0374,metaeeg0374,10.1016/j.eswa.2025.127456,ChannelMix-Based Transformer and Convolutional Multi-View Feature Fusion Network for Unsupervised Cross-Subject EEG Emotion Recognition (CMTCF),doi
+EEG-0378,metaeeg0378,10.1016/j.jneumeth.2024.110276,Cross-Subject Emotion Recognition in BCI Based on Frequency Band Attention Graph Adversarial Network (FBAGAN),doi
+EEG-0379,dacapsnet,10.1016/j.knosys.2023.111137,DA-CapsNet: A Multi-Branch Capsule Network Based on Adversarial Domain Adaption for Cross-Subject EEG Emotion Recognition,doi
+EEG-0383,metaeeg0383,10.1016/j.knosys.2025.113368,Domain Adversarial Neural Network With Reliable Pseudo-Labels Iteration for Cross-Subject EEG Emotion Recognition,doi
+EEG-0384,dfsan,10.1016/j.neucom.2025.130254,Dual Filtration Subdomain Adaptation Network for Cross-Subject EEG Emotion Recognition (DFSAN),doi
+EEG-0385,metaeeg0041,10.1016/j.measurement.2019.107003,Dynamic Entropy-Based Pattern Learning to Identify Emotions From EEG Signals Across Individuals,doi
+EEG-0386,metaeeg0386,10.1016/j.neucom.2025.131749,Dynamic Sparse Directed Graph Convolutional Network With Attention Mechanisms for EEG Emotion Recognition (DSDirGCN-AM),doi
+EEG-0393,metaeeg0393,10.1007/s44443-025-00411-w,EmoDNCL+: Dual-Stream Negative-Sample-Free Contrastive Learning With Neurophysiological Alignment for EEG Emotion Recognition,doi
+EEG-0399,metaeeg0399,10.1088/1741-2552/acb79e,Emotion Recognition Using Spatial-Temporal EEG Features Through Convolutional Graph Attention Network,doi
+EEG-0402,dbpm,10.1016/j.knosys.2025.114650,Fine-Grained Label Propagation via Density-Based Prototype Matching for Cross-Subject EEG Emotion Recognition (DBPM),doi
+EEG-0404,metaeeg0404,10.1016/j.knosys.2024.112770,GCD-JFSE: Graph-Based Class-Domain Knowledge Joint Feature Selection and Ensemble Learning for Cross-Subject EEG Emotion Recognition,doi
+EEG-0405,gnnproto,10.1016/j.neucom.2024.128445,GNN-Based Multi-Source Domain Prototype Representation for Cross-Subject EEG Emotion Recognition,doi
+EEG-0408,idfg,10.1016/j.knosys.2025.115092,IDFG: Information-Regularized Diversity-Fidelity Graph for EEG Emotion Recognition,doi
+EEG-0425,pdgcn,10.1016/j.neunet.2026.109016,PDGCN: A Progressive Dual-Branch Graph Convolution Network for EEG Emotion Recognition,doi
+EEG-0428,prodg,10.1016/j.knosys.2025.114318,ProDG: A Proxy-Domain-Guiding Strategy for Multi-Source-Free Domain Adaptation in EEG Emotion Recognition,doi
+EEG-0436,metaeeg0436,10.1016/j.knosys.2024.112669,Semi-Supervised Pairwise Transfer Learning Based on Multi-Source Domain Adaptation for EEG Emotion Recognition,doi
+EEG-0438,stcbi,10.1016/j.knosys.2025.114115,Spatiotemporal Isomorphic Cross-Brain Region Interaction Network for Cross-Subject EEG Emotion Recognition (STCBI-Nets),doi
+EEG-0440,gruconv,10.1007/s11517-022-02686-x,Subject-Independent EEG Emotion Recognition With Hybrid Spatio-Temporal GRU-Conv Architecture,doi
+EEG-0441,metaeeg0441,10.1016/j.measurement.2022.112379,TMLP+SRDANN: A Domain Adaptation Method for EEG-Based Emotion Recognition,doi
+EEG-0444,umda,10.1016/j.knosys.2025.113938,UMDA-DDSTGN: An Unsupervised Meta-Domain Adaptation Method Using Dynamic Directed Spatial-Temporal Graph Network,doi

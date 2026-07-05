@@ -1,0 +1,14 @@
+task,stratum,k,DL_mean,tau,tau2,I2,Q,Q_df,Q_p,PI_lo,PI_hi
+SEED | 3-class,inductive/no-target,26,85.96,6.61,43.6746,95.5,557.7737,25,0,72.7453,99.1835
+DEAP | arousal (binary),inductive/no-target,3,67.78,6.79,46.0568,96.3,54.4997,2,0,52.3419,83.2111
+SEED | 3-class,transductive-UDA,56,89.07,4.34,18.8375,91.3,628.8857,55,0,80.473,97.6608
+SEED-IV | 4-class,transductive-UDA,39,75.38,7.25,52.5365,94.2,651.8472,38,0,60.9702,89.7824
+SEED-IV | 4-class,inductive/no-target,12,75.13,5.29,27.9566,92.6,149.1215,11,0,64.3005,85.9625
+DREAMER | valence (binary),inductive/no-target,4,74.91,3.17,10.0303,88.6,26.3071,3,0,67.8586,81.9633
+DREAMER | arousal (binary),inductive/no-target,3,74.59,6.39,40.7683,94.4,35.4046,2,0,60.0118,89.1692
+DEAP | valence (binary),transductive-UDA,7,67.5,3.8,14.474,92.9,83.9339,6,0,59.478,75.5167
+DEAP | arousal (binary),transductive-UDA,5,68.96,4.28,18.3503,91.7,48.36,4,0,59.6755,78.2474
+SEED-V | 5-class,inductive/no-target,3,73.18,9.31,86.6185,94,33.1724,2,0,51.947,94.4173
+SEED | 3-class,few-shot/target-label,7,88.67,5.5,30.2715,96.9,191.8189,6,0,77.0672,100.2733
+SEED-IV | 4-class,few-shot/target-label,5,70.61,9.77,95.4749,93.2,58.7405,4,0,49.1169,92.1072
+DEAP | binary,transductive-UDA,3,65.25,0,0,0,0.3321,2,0.847,64.2981,66.1952

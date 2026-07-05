@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="214.069069pt" height="124.4592pt" viewBox="0 0 214.069069 124.4592" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-05T15:57:30.182893</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 124.4592 
+L 214.069069 124.4592 
+L 214.069069 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 6.75225 118.429128 
+L 194.93775 118.429128 
+L 194.93775 8.447256 
+L 6.75225 8.447256 
+z
+" clip-path="url(#p46a80bb7d9)" style="fill: #ffffff; stroke: #b8c1cc; stroke-width: 0.72; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 6.75225 18.115992 
+L 194.93775 18.115992 
+L 194.93775 8.447256 
+L 6.75225 8.447256 
+z
+" clip-path="url(#p46a80bb7d9)" style="fill: #eef2f6; stroke: #b8c1cc; stroke-width: 0.72; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 10.71405 114.803352 
+L 190.97595 114.803352 
+L 190.97595 103.926024 
+L 10.71405 103.926024 
+z
+" clip-path="url(#p46a80bb7d9)" style="fill: #f7f8fa; stroke: #d8dee7; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #111827" x="11.11023" y="14.992436" transform="rotate(-0 11.11023 14.992436)">Algorithm 1.</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 6.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #111827" x="42.40845" y="14.992436" transform="rotate(-0 42.40845 14.992436)">Leakage-safe benchmarking protocol</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #111827" x="12.69495" y="25.593827" transform="rotate(-0 12.69495 25.593827)">Input:</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="33.4944" y="25.593827" transform="rotate(-0 33.4944 25.593827)">D, subject/session IDs, labels y, target-access mode a</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #111827" x="12.69495" y="32.603661" transform="rotate(-0 12.69495 32.603661)">Output:</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 5.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="33.4944" y="32.603661" transform="rotate(-0 33.4944 32.603661)">subject scores, 95% CI, and audit metadata</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #3b6e8f" x="12.69495" y="39.585518" transform="rotate(-0 12.69495 39.585518)">1:</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #111827" x="23.98608" y="39.568158" transform="rotate(-0 23.98608 39.568158)">define stratum = dataset x task x protocol x target-access</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #3b6e8f" x="12.69495" y="46.353633" transform="rotate(-0 12.69495 46.353633)">2:</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #111827" x="23.98608" y="46.353633" transform="rotate(-0 23.98608 46.353633)">split subjects into train/validation/test folds</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #3b6e8f" x="12.69495" y="53.121748" transform="rotate(-0 12.69495 53.121748)">3:</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #111827" x="23.98608" y="53.121748" transform="rotate(-0 23.98608 53.121748)">for each fold f do</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #3b6e8f" x="12.69495" y="59.889863" transform="rotate(-0 12.69495 59.889863)">4:</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #111827" x="23.98608" y="59.872504" transform="rotate(-0 23.98608 59.872504)">   fit preprocessing on training subjects only</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #3b6e8f" x="12.69495" y="66.657978" transform="rotate(-0 12.69495 66.657978)">5:</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #111827" x="23.98608" y="66.640619" transform="rotate(-0 23.98608 66.640619)">   tune model using validation subjects only</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #3b6e8f" x="12.69495" y="73.426094" transform="rotate(-0 12.69495 73.426094)">6:</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #111827" x="23.98608" y="73.426094" transform="rotate(-0 23.98608 73.426094)">   evaluate locked model on held-out subjects</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #3b6e8f" x="12.69495" y="80.194209" transform="rotate(-0 12.69495 80.194209)">7:</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #111827" x="23.98608" y="80.194209" transform="rotate(-0 23.98608 80.194209)">end for</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #3b6e8f" x="12.69495" y="86.962324" transform="rotate(-0 12.69495 86.962324)">8:</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #111827" x="23.98608" y="86.944965" transform="rotate(-0 23.98608 86.944965)">aggregate subject scores; report mean, 95% CI, class balance</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #3b6e8f" x="12.69495" y="93.730439" transform="rotate(-0 12.69495 93.730439)">9:</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 5.05px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #111827" x="23.98608" y="93.71308" transform="rotate(-0 23.98608 93.71308)">release code, seeds, fold IDs, exclusions, and target access</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #111827" x="13.88349" y="110.502657" transform="rotate(-0 13.88349 110.502657)">Audit checks:</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 4.85px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7280" x="44.38935" y="110.461266" transform="rotate(-0 44.38935 110.461266)">matched strata; no outside-fold normalization; no test-subject tuning</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p46a80bb7d9">
+   <rect x="1.8" y="1.8" width="198.09" height="120.8592"/>
+  </clipPath>
+ </defs>
+</svg>

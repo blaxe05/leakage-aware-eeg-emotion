@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="405.36pt" height="181.008pt" viewBox="0 0 405.36 181.008" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-05T15:57:30.637325</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 181.008 
+L 405.36 181.008 
+L 405.36 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 33.9408 87.310656 
+L 186.6096 87.310656 
+Q 191.43072 87.310656 191.43072 85.18176 
+L 191.43072 42.60384 
+Q 191.43072 40.474944 186.6096 40.474944 
+L 33.9408 40.474944 
+Q 29.11968 40.474944 29.11968 42.60384 
+L 29.11968 85.18176 
+Q 29.11968 87.310656 33.9408 87.310656 
+z
+" clip-path="url(#pa8d4391105)" style="fill: #ffffff; stroke: #3b6e8f; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 218.7504 87.310656 
+L 371.4192 87.310656 
+Q 376.24032 87.310656 376.24032 85.18176 
+L 376.24032 42.60384 
+Q 376.24032 40.474944 371.4192 40.474944 
+L 218.7504 40.474944 
+Q 213.92928 40.474944 213.92928 42.60384 
+L 213.92928 85.18176 
+Q 213.92928 87.310656 218.7504 87.310656 
+z
+" clip-path="url(#pa8d4391105)" style="fill: #ffffff; stroke: #d1903f; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 33.9408 149.403456 
+L 186.6096 149.403456 
+Q 191.43072 149.403456 191.43072 147.27456 
+L 191.43072 104.69664 
+Q 191.43072 102.567744 186.6096 102.567744 
+L 33.9408 102.567744 
+Q 29.11968 102.567744 29.11968 104.69664 
+L 29.11968 147.27456 
+Q 29.11968 149.403456 33.9408 149.403456 
+z
+" clip-path="url(#pa8d4391105)" style="fill: #ffffff; stroke: #5d8b61; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 218.7504 149.403456 
+L 371.4192 149.403456 
+Q 376.24032 149.403456 376.24032 147.27456 
+L 376.24032 104.69664 
+Q 376.24032 102.567744 371.4192 102.567744 
+L 218.7504 102.567744 
+Q 213.92928 102.567744 213.92928 104.69664 
+L 213.92928 147.27456 
+Q 213.92928 149.403456 218.7504 149.403456 
+z
+" clip-path="url(#pa8d4391105)" style="fill: #ffffff; stroke: #7a6da8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #3b6e8f" x="41.976" y="55.533382" transform="rotate(-0 41.976 55.533382)">Benchmarking</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(41.976 61.640432)">registered splits</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(41.976 69.372522)">multi-dataset leaderboards</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(41.976 77.104613)">chance-normalized metrics</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #d1903f" x="226.7856" y="55.566195" transform="rotate(-0 226.7856 55.566195)">Statistics</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(226.7856 61.640432)">subject-level uncertainty</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(226.7856 69.372522)">multilevel synthesis</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(226.7856 77.104613)">outlier diagnostics</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d8b61" x="41.976" y="117.658995" transform="rotate(-0 41.976 117.658995)">Models</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(41.976 123.733232)">source-only DG</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(41.976 131.465322)">uncertainty-aware adaptation</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(41.976 139.197413)">subject-conditioned reps</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #7a6da8" x="226.7856" y="117.626182" transform="rotate(-0 226.7856 117.626182)">Reproducibility</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(226.7856 123.733232)">open code and folds</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(226.7856 131.465322)">preprocessing provenance</text>
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; fill: #111827" transform="translate(226.7856 139.197413)">leakage audit</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="202.68" y="20.449279" transform="rotate(-0 202.68 20.449279)">Future agenda: make each reported number auditable</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #111827" x="202.68" y="168.840225" transform="rotate(-0 202.68 168.840225)">Every claim should state the problem solved, target access used, and uncertainty around the estimate.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa8d4391105">
+   <rect x="1.8" y="1.8" width="401.76" height="177.408"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,6 @@
+moderator,scope,contrast,result,interpretation
+Target access,Matched task pools,Transductive minus inductive,SEED +3.1 pp; SEED-IV +0.2 pp,No large transductive advantage; protocols should be compared within task and target-access contract.
+Method family,SEED 3-class,highest vs lowest subgroup,graph/GNN 89% vs traditional ML 79.28%,Architecture family explains less spread than protocol and reporting.
+Leakage risk,SEED 3-class,Some-concerns vs low/low-some,88.32% vs 83.83%,Higher-risk reporting is associated with higher reported accuracy.
+Code availability,SEED 3-class,Code vs no code,89.72% vs 87.99%,Association is descriptive; code availability is confounded with recency and method family.
+Publication year,transductive SEED 3-class,Weighted meta-regression slope,"+1.067 pp/year (SE 0.409, k=56)",Exploratory upward drift on a fixed benchmark; not causal evidence of progress.
