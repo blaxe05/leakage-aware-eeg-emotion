@@ -4,7 +4,7 @@ Date: 2026-09-06
 
 ## Rationale
 
-Reviewer 1 requested a comparison that holds architecture and feature extraction fixed while varying access to target-subject data. This analysis was not part of the original synthesis plan. It is therefore identified as a post-review protocol amendment and is kept separate from the prespecified random-effects meta-analysis.
+To assess target-access differences while holding architecture and feature extraction fixed, the revision adds a within-study matched comparison. This analysis was not part of the original synthesis plan. It is therefore identified as a dated post-hoc protocol amendment and is kept separate from the prespecified random-effects meta-analysis.
 
 ## Eligibility rules fixed before extracting comparison values
 

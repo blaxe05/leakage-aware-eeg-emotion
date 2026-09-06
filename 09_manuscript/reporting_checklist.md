@@ -40,5 +40,5 @@ following. Each item is designed to make leakage detectable and results reproduc
 - [ ] Public code repository matching the paper; seeds, configs, and split definitions released.
 - [ ] Exact preprocessing pipeline (or use of official precomputed features, with caveats stated).
 
-> Authors can self-rate against this list; reviewers can use it to locate leakage quickly. It mirrors
-> the 12-item quality framework in `../06_quality/quality_scoring_rubric.md`.
+> This checklist supports structured self-audit and mirrors the 12-item quality
+> framework in `../06_quality/quality_scoring_rubric.md`.

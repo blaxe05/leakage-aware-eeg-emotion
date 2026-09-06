@@ -30,7 +30,7 @@ python scripts/generate_publication_bias_diagnostics.py
 
 Generated figures are written under `10_figures_nature_style/`.
 
-## 4. Regenerate the reviewer-requested analyses
+## 4. Regenerate the revision-specific analyses
 
 ```bash
 python scripts/generate_reviewer_revision_analyses.py

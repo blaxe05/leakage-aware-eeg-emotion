@@ -7,7 +7,7 @@ Reproducibility package for the paper:
 > *Neurocomputing* (revised manuscript), 2026.
 
 This repository releases the full, auditable evidence base and analysis code behind the review: the
-extraction corpus, the risk-of-bias sheet, the leakage-evidence records, the meta-analysis inputs and
+extraction corpus, the risk-of-bias sheet, the protocol-audit evidence, the meta-analysis inputs and
 code, the figure-generation code, the search strings and PRISMA records, the blinded reviewer and
 consensus-adjudication logs, the citation-to-record map, the reporting checklist, and a
 data-traceability map. Its purpose is to let anyone **reproduce every number in the paper from the raw
@@ -36,13 +36,13 @@ The folders follow the systematic-review pipeline in order.
 | `02_search/` | Boolean search strings per database, PRISMA flow record, raw search log |
 | `03_screening/` | Title/abstract screening decisions, deduplication notes, and the blinded reviewer + consensus screening sheets (`reviewer_screening_777_records/`) |
 | `04_extraction/` | 63-field extraction corpus (`extraction_master.csv`), extraction schema, citation-to-record map, active-exclusion log, and the blinded reviewer meta-extraction sheets (`reviewer_meta_extraction_review/`) |
-| `06_quality/` | Risk-of-bias sheet, 12-item scoring rubric, leakage-evidence cases, quality summary |
+| `06_quality/` | Risk-of-bias sheet, 12-item scoring rubric, protocol-audit evidence, quality summary |
 | `07_meta_analysis/` | Pooled results, diagnostics, moderator analyses, publication-bias diagnostics, per-dataset counts, statistics summary, and the analysis plan |
 | `scripts/` | Meta-analysis and figure-generation code |
 | `10_figures_nature_style/` | Generated figures (PNG + PDF) |
 | `09_manuscript/` | Data-traceability map and the minimum reporting checklist |
 
-The reviewer-requested R1 additions are dated `20260906`. They comprise the protocol amendment,
+The revision-specific additions are dated `20260906`. They comprise the protocol amendment,
 same-model target-access case-series extraction, normalization-access audit, architecture and
 generalization-mechanism summaries within target-access branches, and a manifest linking each
 derived output to its source and script.
@@ -67,7 +67,7 @@ python scripts/recompute_statistics_after_adjudication.py
 python scripts/generate_nature_style_figures.py          # main figures (PRISMA, forest, landscape, ...)
 python scripts/generate_publication_bias_diagnostics.py  # funnel plots
 
-# 3. Regenerate the reviewer-requested matched and branch-specific summaries.
+# 3. Regenerate the matched and branch-specific revision summaries.
 #    This analysis is CPU-only and requires no deep-learning framework.
 python scripts/generate_reviewer_revision_analyses.py
 ```
@@ -88,9 +88,9 @@ The within-study target-access case series is sourced from
 
 ## Provenance
 
-Screening and extraction were initialized by an LLM-assisted pass and then audited by an independent
-reviewer, with a consensus adjudicator resolving disagreements (`03_screening/`,
-`04_extraction/reviewer_meta_extraction_review/`). Three records were removed from active analysis
+The repository preserves the independent audit and consensus-adjudication records used to finalize
+screening and extraction (`03_screening/`, `04_extraction/reviewer_meta_extraction_review/`). Three
+records were removed from active analysis
 (`04_extraction/excluded_from_active_analysis_20260704.csv`): EEG-0041 and EEG-0096, and the duplicate
 EEG-0104 (a preprint superseded by its published version, EEG-0350).
 

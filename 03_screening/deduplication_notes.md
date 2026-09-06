@@ -22,5 +22,6 @@
 
 ## Reliability
 
-- Where a second reviewer is available, record dual decisions and compute agreement (e.g., Cohen's κ);
-  resolve conflicts by discussion. For single-reviewer passes, note this as a limitation in the manuscript.
+The independent reviewer screened all 777 title/abstract records. Agreement with the initial project
+decision was recorded before consensus adjudication, and discordant or unclear records were resolved
+in the frozen consensus file under `reviewer_screening_777_records/`.

@@ -1,69 +1,74 @@
-# Stage 1 — Review Protocol: Question and Scope
+# Review Protocol
 
-## Working title
+## Review Question And Scope
 
-**Cross-Subject Generalization in EEG-Based Emotion Recognition: A Systematic Review, Leakage-Aware
-Taxonomy, and Meta-Analysis Across Public Datasets.**
+This systematic review evaluates what can be concluded from published
+cross-subject EEG emotion-recognition results after aligning their dataset,
+task, metric, evaluation regime, generalization mechanism, and target-access
+contract.
 
-## Positioning (what makes this not a generic survey)
+The review does not presume that protocol explains all performance variation.
+Architecture, feature representation, preprocessing, optimization, model
+selection, reporting completeness, and dataset characteristics are retained as
+candidate sources of variation.
 
-This review treats **cross-subject generalization as the central problem**, not one topic among many.
-Its distinguishing contributions are:
+## PICOS-ML Framework
 
-1. A **leakage-aware evaluation taxonomy** that separates genuinely subject-independent results from
-   results inflated by evaluation leakage or protocol ambiguity.
-2. **Dataset- and protocol-normalized evidence synthesis** — results are only compared when the
-   underlying task, dataset, and protocol are compatible.
-3. **Quantitative meta-analysis only where results are comparable**, with narrative synthesis elsewhere.
-4. Explicit separation of: subject-dependent, subject-independent (LOSO), cross-session, transductive
-   UDA, inductive UDA, domain generalization (DG), source-free adaptation, few-shot target calibration,
-   and cross-dataset generalization.
-5. Practical, **leakage-safe benchmarking recommendations** for the field.
+| Element | Definition |
+|---|---|
+| Population/data | Human EEG recordings used for emotion or affective-state recognition. |
+| Intervention/model | Machine-learning, deep-learning, transfer-learning, adaptation, generalization, pretraining, and calibration methods that predict affect from EEG. |
+| Comparator | Contract-matched classical, deep-learning, adaptation, or generalization baselines. |
+| Outcomes | Accuracy, balanced accuracy, macro-F1, weighted-F1, or AUC, with subject- or fold-level dispersion where available. |
+| Study design | Cross-subject, subject-independent, cross-session, cross-dataset, transductive, inductive, source-free, or target-calibrated evaluation with a quantitative result. |
 
-## PICOS-ML framing (PICOS adapted for machine learning)
+## Review Questions
 
-| Element | Definition for this review |
-|---------|----------------------------|
-| **Population / data** | Human EEG recordings used for emotion / affective-state recognition (public or clearly described datasets). |
-| **Intervention / model** | ML / DL / transfer-learning / domain-adaptation / domain-generalization / source-free / few-shot methods producing emotion predictions from EEG. |
-| **Comparator** | Baselines: traditional ML, deep learning, and DA/UDA/DG methods reported in the same study or as referenced SOTA. |
-| **Outcomes** | Accuracy, balanced accuracy, macro-F1, weighted-F1, AUC; subject-level / cross-session / cross-dataset performance; SD and confidence intervals. |
-| **Study design** | Cross-subject / subject-independent evaluation (primary), plus related transfer settings (cross-session, UDA, DG, few-shot, cross-dataset). Subject-dependent-only studies are excluded from primary synthesis. |
+1. Which public benchmarks and corpus patterns define the evidence base?
+2. Which method families have been evaluated under each target-access contract?
+3. What pooled performance is supported within comparable
+   dataset-by-task-by-metric-by-protocol strata?
+4. Which recoverable factors structure reported performance variation?
+5. How do verified protocol limitations, reclassifications, and unresolved
+   ambiguity affect evidence use?
+6. What reporting and benchmarking practices follow from the evidence?
 
-## Research questions
+Secondary questions address risk of bias, reproducibility and dispersion
+reporting, non-poolable evidence, and uncertainty remaining after protocol
+normalization.
 
-### Primary
-- **RQ1** — Which datasets, emotion models, and evaluation protocols dominate cross-subject EEG emotion
-  recognition?
-- **RQ2** — Which method families show consistent gains under **leakage-safe** subject-independent
-  evaluation?
-- **RQ3** — How much does reported performance vary by dataset, protocol, feature type, model family,
-  and adaptation setting?
-- **RQ4** — What types of data leakage or protocol ambiguity are common, and how do they affect
-  reported results?
-- **RQ5** — Which evidence is strong enough for meta-analysis, and where is narrative synthesis more
-  appropriate?
-- **RQ6** — What are the unresolved methodological gaps for future IEEE TAC-level work?
+## Scope Boundaries
 
-### Secondary
-- **SQ1** — How consistently are validation and hyperparameter-selection protocols reported?
-- **SQ2** — How available and faithful is released code relative to reported results?
-- **SQ3** — How often are per-subject statistics and confidence intervals reported (vs. single means)?
-- **SQ4** — How comparable are emotion-label schemes across datasets, and what harmonization is needed?
+- Publication years: 2010 through the final search date, 14 May 2026.
+- Language: English.
+- Study type: primary research with at least one quantitative EEG-based
+  cross-subject or transfer result.
+- Exclusions: subject-dependent-only evaluation, non-EEG work, reviews,
+  non-primary reports, private data without an extractable public-benchmark
+  result, insufficient protocol information, and duplicate reports.
+- Subject-dependent and cross-session results may be retained only as explicit
+  contrasts and are not pooled with subject-disjoint evidence.
 
-## Scope boundaries
+## Evidence Model
 
-- **In scope:** EEG-based emotion/affect recognition with at least one cross-subject / subject-independent
-  / cross-session / DA / DG / source-free / few-shot / cross-dataset result and ≥1 quantitative metric.
-- **Out of scope:** Subject-dependent-only studies (except as contrast); non-EEG modalities unless EEG
-  results are separately reported; reviews/editorials/abstract-only; insufficient protocol detail.
-- **Date range:** **2010–present** (rationale: public EEG emotion benchmarks DEAP (2011) and SEED
-  (2015) anchor the modern literature; pre-2010 work predates these shared benchmarks). Earlier
-  foundational work may be cited in Background but not extracted for synthesis.
-- **Languages:** English (non-English included only if essential and fully extractable — flagged).
+Each extracted result receives three separate descriptors:
 
-## Deliverable linkage
+1. evaluation regime, such as subject-disjoint LOSO, subject-mixed validation,
+   cross-session, or cross-dataset;
+2. generalization mechanism, such as source-only learning, domain adaptation,
+   domain generalization, contrastive learning, or pretraining; and
+3. target-access class, ranging from no target data to unlabeled target data or
+   target labels.
 
-Stage 1 → drives the search strategy (`02_search/`), the inclusion/exclusion criteria
-(`01_protocol/inclusion_exclusion.md`), and the structure of the meta-analysis strata
-(`07_meta_analysis/meta_analysis_plan.md`).
+Pooling is permitted only when dataset, task granularity, metric, and
+target-access protocol are compatible and the dispersion unit is recoverable.
+The operational definitions are in `protocol_taxonomy.md` and
+`leakage_taxonomy.md`.
+
+## Reproducibility Links
+
+- Search strategy: `../02_search/boolean_search_strings.md`.
+- Eligibility rules: `inclusion_exclusion.md`.
+- Extraction fields: `../04_extraction/extraction_schema.md`.
+- Statistical plan: `../07_meta_analysis/meta_analysis_plan.md`.
+- Reporting and risk rubric: `../06_quality/quality_scoring_rubric.md`.
