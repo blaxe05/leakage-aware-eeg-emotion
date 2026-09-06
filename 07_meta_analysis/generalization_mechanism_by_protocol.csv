@@ -1,0 +1,24 @@
+dataset_task,target_access_protocol,generalization_mechanism,k,median_accuracy,min_accuracy,max_accuracy,evidence_confidence,interpretation
+SEED | 3-class,few-shot/target-label,target-supervised calibration,7,90.09,77.5,96.72,low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,inductive/no-target,contrastive/self-supervised,4,88.62,86.35,93.6,very low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,inductive/no-target,domain adaptation/discrepancy,2,75.55,71.14,79.95,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,inductive/no-target,domain generalization/source-free,2,93.2,93.11,93.29,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,inductive/no-target,pretraining/fine-tuning,1,84.48,84.48,84.48,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,inductive/no-target,source-only/other,17,87.04,60.79,94.83,low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,transductive-UDA,contrastive/self-supervised,5,90.21,86.4,97.61,low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,transductive-UDA,domain adaptation/discrepancy,39,90.17,64.16,95.74,low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,transductive-UDA,domain generalization/source-free,1,85.9,85.9,85.9,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,transductive-UDA,pretraining/fine-tuning,2,91.23,87.02,95.45,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,transductive-UDA,source-only/other,6,93.27,90.15,94.86,low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED | 3-class,transductive-UDA,target-supervised calibration,3,85.56,78.67,86.7,very low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,few-shot/target-label,target-supervised calibration,5,73.08,61.2,95.95,low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,inductive/no-target,contrastive/self-supervised,3,79.32,71.59,82.35,very low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,inductive/no-target,domain adaptation/discrepancy,1,52.82,52.82,52.82,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,inductive/no-target,domain generalization/source-free,2,79.24,77.16,81.32,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,inductive/no-target,source-only/other,6,75.56,72.5,79.17,low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,transductive-UDA,contrastive/self-supervised,4,75.06,74.34,86.31,very low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,transductive-UDA,domain adaptation/discrepancy,26,75.09,59.34,86.75,low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,transductive-UDA,domain generalization/source-free,1,70.4,70.4,70.4,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,transductive-UDA,pretraining/fine-tuning,1,82.16,82.16,82.16,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,transductive-UDA,source-only/other,5,78.9,67.34,82.48,low,descriptive coverage only; mechanisms are not exchangeable interventions
+SEED-IV | 4-class,transductive-UDA,target-supervised calibration,2,66.95,58.98,74.92,insufficient,descriptive coverage only; mechanisms are not exchangeable interventions

@@ -1,0 +1,13 @@
+{
+  "analysis": "post-review matched descriptive case series",
+  "eligible_studies": 2,
+  "reported_contrasts": 7,
+  "positive_contrasts": 7,
+  "contrast_median_difference_pp": 7.78,
+  "contrast_min_difference_pp": 1.62,
+  "contrast_max_difference_pp": 9.76,
+  "study_mean_min_pp": 5.96,
+  "study_mean_max_pp": 6.66,
+  "pooled_effect": null,
+  "reason_not_pooled": "Only two eligible studies were found; multiple contrasts within each study are dependent, and paired subject-level covariance was unavailable."
+}

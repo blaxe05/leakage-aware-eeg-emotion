@@ -1,0 +1,3 @@
+paper_id,citation_key,study_title,n_reported_contrasts,mean_difference_pp,median_difference_pp,min_difference_pp,max_difference_pp
+EEG-0070,metaeeg0070,A convolution and attention-based conditional adversarial domain adaptation neural network for emotion recognition using electroencephalography,3,6.66,8.6,1.62,9.76
+EEG-0257,metaeeg0257,Deep Representation Learning With Assisted Domain Adaptation for EEG-Based Cross-Subject Emotion Recognition,4,5.96,6.03,3.96,7.81

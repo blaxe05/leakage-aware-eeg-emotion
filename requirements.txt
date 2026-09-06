@@ -1,5 +1,7 @@
-# Tested with Python 3.11–3.13.
+# Python environment for reproducing the meta-analysis and figures.
+# Tested with Python 3.12. Pin exact versions if bit-identical output is required.
 pandas>=2.0
 numpy>=1.24
 scipy>=1.10
 matplotlib>=3.7
+Pillow>=10.0

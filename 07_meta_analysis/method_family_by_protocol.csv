@@ -1,0 +1,27 @@
+dataset_task,target_access_protocol,method_family,k,median_accuracy,min_accuracy,max_accuracy,evidence_confidence,interpretation
+SEED | 3-class,few-shot/target-label,graph/GNN,1,78.71,78.71,78.71,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,few-shot/target-label,other deep,2,87.11,77.5,96.72,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,few-shot/target-label,unspecified/hybrid,4,91.73,86.78,96.43,very low,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,inductive/no-target,classical/shallow,3,83.33,69.89,83.33,very low,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,inductive/no-target,graph/GNN,16,89.84,60.79,94.83,low,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,inductive/no-target,other deep,1,86.35,86.35,86.35,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,inductive/no-target,transformer/attention,2,87.12,87.03,87.2,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,inductive/no-target,unspecified/hybrid,4,82.99,71.14,89.3,very low,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,transductive-UDA,CNN/RNN/state-space,3,86.4,84.63,91.65,very low,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,transductive-UDA,classical/shallow,2,80.44,76.31,84.57,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,transductive-UDA,graph/GNN,19,91.48,77.23,97.61,low,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,transductive-UDA,other deep,14,91.02,81.04,94.86,low,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,transductive-UDA,transformer/attention,3,88.1,87.02,93.8,very low,descriptive coverage only; not a controlled architecture comparison
+SEED | 3-class,transductive-UDA,unspecified/hybrid,15,88.75,64.16,95.74,low,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,few-shot/target-label,graph/GNN,1,64.03,64.03,64.03,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,few-shot/target-label,other deep,2,78.58,61.2,95.95,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,few-shot/target-label,unspecified/hybrid,2,77.81,73.08,82.55,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,inductive/no-target,graph/GNN,8,78.16,52.82,82.35,low,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,inductive/no-target,other deep,1,71.59,71.59,71.59,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,inductive/no-target,transformer/attention,2,74.18,72.5,75.86,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,inductive/no-target,unspecified/hybrid,1,74.6,74.6,74.6,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,transductive-UDA,CNN/RNN/state-space,1,73.92,73.92,73.92,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,transductive-UDA,graph/GNN,13,77.55,58.98,86.31,low,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,transductive-UDA,other deep,12,74.61,59.34,85.62,low,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,transductive-UDA,transformer/attention,2,79.42,79.37,79.47,insufficient,descriptive coverage only; not a controlled architecture comparison
+SEED-IV | 4-class,transductive-UDA,unspecified/hybrid,11,74.34,67.61,86.75,low,descriptive coverage only; not a controlled architecture comparison

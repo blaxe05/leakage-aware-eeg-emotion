@@ -1,10 +1,10 @@
-# Cross-Subject EEG Emotion Recognition Revisited
+# Cross-Subject EEG Emotion Recognition
 
 Reproducibility package for the paper:
 
-> **Cross-Subject EEG Emotion Recognition Revisited: A Leakage-Aware, Protocol-Normalized Systematic Review and Meta-Analysis**
+> **Cross-Subject EEG Emotion Recognition: A Protocol-Normalized Systematic Review and Meta-Analysis of Benchmark Comparability**
 > Muhamad Hafiz Abd Latif and Nur Syahirah Roslan.
-> *IEEE Transactions on Affective Computing* (under review), 2026.
+> *Neurocomputing* (revised manuscript), 2026.
 
 This repository releases the full, auditable evidence base and analysis code behind the review: the
 extraction corpus, the risk-of-bias sheet, the leakage-evidence records, the meta-analysis inputs and
@@ -42,6 +42,11 @@ The folders follow the systematic-review pipeline in order.
 | `10_figures_nature_style/` | Generated figures (PNG + PDF) |
 | `09_manuscript/` | Data-traceability map and the minimum reporting checklist |
 
+The reviewer-requested R1 additions are dated `20260906`. They comprise the protocol amendment,
+same-model target-access case-series extraction, normalization-access audit, architecture and
+generalization-mechanism summaries within target-access branches, and a manifest linking each
+derived output to its source and script.
+
 **Naming note:** in file and column names the prefix `reviewer_` denotes the independent reviewer and
 `adjudicator_` denotes the consensus adjudicator.
 
@@ -61,6 +66,10 @@ python scripts/recompute_statistics_after_adjudication.py
 # 2. Regenerate the figures.
 python scripts/generate_nature_style_figures.py          # main figures (PRISMA, forest, landscape, ...)
 python scripts/generate_publication_bias_diagnostics.py  # funnel plots
+
+# 3. Regenerate the reviewer-requested matched and branch-specific summaries.
+#    This analysis is CPU-only and requires no deep-learning framework.
+python scripts/generate_reviewer_revision_analyses.py
 ```
 
 The scripts read only the CSV/JSON files in this repository and write back into `07_meta_analysis/`
@@ -72,6 +81,10 @@ and `10_figures_nature_style/`. `recompute_statistics_after_adjudication.py` is 
 source file and the exact reproduction rule (e.g. "count unique `paper_id` where `include_meta == yes`").
 To map a manuscript citation to its extraction record, use
 `04_extraction/meta_eligible_reference_audit_20260705.csv` (paper id, citation key, DOI, title).
+The within-study target-access case series is sourced from
+`04_extraction/matched_target_access_extraction_20260906.csv`; its generated outputs are in
+`07_meta_analysis/matched_target_access_*.{csv,json}`. The normalization decision trail is in
+`04_extraction/normalization_access_audit_20260906.csv`.
 
 ## Provenance
 
@@ -84,6 +97,7 @@ EEG-0104 (a preprint superseded by its published version, EEG-0350).
 ## Citation
 
 See `CITATION.cff`. Please cite the paper; the volume/issue/pages/DOI will be added on acceptance.
+The frozen revision evaluated in the resubmission is tagged `neucom-r1-2026-09-06`.
 
 ## License
 

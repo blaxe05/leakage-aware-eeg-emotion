@@ -746,7 +746,7 @@ def fig11_evidence_landscape_abcd(extraction: pd.DataFrame, meta: pd.DataFrame) 
     clean_axes(ax_c, "x")
     add_panel(ax_c, "C")
 
-    # D. Matched-task protocol comparison.
+    # D. Cross-study protocol-stratum comparison for the same dataset and task.
     tasks = [
         ("SEED 3-class", "SEED | 3-class"),
         ("SEED-IV 4-class", "SEED-IV | 4-class"),
@@ -773,7 +773,7 @@ def fig11_evidence_landscape_abcd(extraction: pd.DataFrame, meta: pd.DataFrame) 
     ax_d.set_yticklabels([label for label, _ in tasks], fontsize=6.2)
     ax_d.set_xlim(60, 99)
     ax_d.set_ylim(len(tasks) - 0.55, -0.55)
-    ax_d.set_title("Matched protocol shifts", loc="left", fontsize=8.2, pad=5)
+    ax_d.set_title("Cross-study protocol contrasts", loc="left", fontsize=8.2, pad=5)
     ax_d.text(
         0.99,
         1.045,

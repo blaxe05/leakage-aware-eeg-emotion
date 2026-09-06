@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use these materials, please cite the associated paper."
-title: "Cross-Subject EEG Emotion Recognition Revisited: A Leakage-Aware, Protocol-Normalized Systematic Review and Meta-Analysis (reproducibility package)"
+title: "Cross-Subject EEG Emotion Recognition: A Protocol-Normalized Systematic Review and Meta-Analysis of Benchmark Comparability (reproducibility package)"
 authors:
   - family-names: "Abd Latif"
     given-names: "Muhamad Hafiz"
@@ -10,9 +10,11 @@ authors:
     orcid: "https://orcid.org/0000-0002-6371-1067"
 license: MIT
 repository-code: "https://github.com/blaxe05/leakage-aware-eeg-emotion"
+version: "neucom-r1-2026-09-06"
+date-released: 2026-09-06
 preferred-citation:
   type: article
-  title: "Cross-Subject EEG Emotion Recognition Revisited: A Leakage-Aware, Protocol-Normalized Systematic Review and Meta-Analysis"
+  title: "Cross-Subject EEG Emotion Recognition: A Protocol-Normalized Systematic Review and Meta-Analysis of Benchmark Comparability"
   authors:
     - family-names: "Abd Latif"
       given-names: "Muhamad Hafiz"
@@ -20,6 +22,6 @@ preferred-citation:
     - family-names: "Roslan"
       given-names: "Nur Syahirah"
       orcid: "https://orcid.org/0000-0002-6371-1067"
-  journal: "IEEE Transactions on Affective Computing"
+  journal: "Neurocomputing"
   year: 2026
-  notes: "Manuscript under review. Update volume/issue/pages/DOI upon acceptance."
+  notes: "Revised manuscript. Update volume/issue/pages/DOI upon acceptance."
